@@ -1,0 +1,67 @@
+body {
+	height:100%;
+	width:100%;
+	background:#111 url(../img/bg-repeat-flip.png) right top repeat-y;
+	padding:5px;
+	overflow:visible;
+}
+p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
+	color:#f2f2f2;
+	font-family:'Graduate', cursive;
+	font-weight:normal;
+}
+
+/* colors */
+
+header h1 b,
+ul li div p b {
+	color:#FFC83F;
+}
+ul li > p {
+	border-left:#FFC83F 10px solid;
+}
+ul li  div p a {
+	color:#99cccc;
+}
+/* */
+
+header {
+	padding:20px 0;
+}
+header h1 {
+	font-size:32px;
+}
+header h1 b {
+}
+
+#wrapper {
+	width:auto;
+	max-width:900px;
+}
+ul {
+	display:inline-block;
+	max-width:900px;
+}
+ul li {
+	width:100%;
+	padding:10px;
+	padding-left:0;
+}
+ul li > p {
+	font-size:24px;
+	padding-left:5px;
+}
+ul li div {
+	margin:10px;
+	padding:3px;
+}
+ul li div p,
+ul li div a {
+	font-size:14px;
+	color:#f2f2f2;
+	font-family:monospace;
+	line-height:16px;
+}
+ul li div a {
+	text-decoration:none;
+}
