@@ -6,7 +6,7 @@ $(document).ready(function() {
 				transformOrigin: '120px 120px'
 			})
 			.transition({
-				rotate:'720deg'
+				rotate:'360deg'
 			}, 20000).stop(),
 
 	$('p.first').fadeIn(6000).fadeOut(2000),
