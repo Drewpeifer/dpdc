@@ -10,7 +10,7 @@ p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	font-family:'Graduate', cursive;
 	font-weight:normal;
 }
-body div {
+#wrapper > div {
 	cursor:pointer;
 }
 /* colors */
@@ -47,6 +47,7 @@ p.third {
 	left:165px;
 }
 
+/* drawer and content */
 #wrapper {
 	width:auto;
 	max-width:900px;
@@ -82,6 +83,20 @@ ul li div a {
 }
 
 /* spiral */
+
+/*
+	the spiral is just a series of squares,
+	centered within each other, with borders
+	that appear to connect. Each set of 4 squares
+	completes one revolution and the pattern
+	repeats
+
+	http://fu2k.org/alex/css/test/Spiral.mhtml
+
+	I added border-radius to this demo, resized,
+	and jQuery does the spin.
+*/
+
 #spiral {
 	height:250px;
 	width:250px;
