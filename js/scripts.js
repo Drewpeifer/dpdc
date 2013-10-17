@@ -4,27 +4,30 @@ $(document).ready(function() {
 	$('#wrapper').fadeIn(), // fade everything else in
 	$('#spiral').css({
 				transformOrigin: '120px 120px' // center transform
-			})
-			.transition({
-				rotate:'360deg' // do one slow spin
-			}, 20000).stop(),
+				}).transition({
+					rotate:'360deg' // do one slow spin
+				}, 20000).stop(),
 
-	// hynpoText fades in header
+	// hynpoText fades in and then out
 	$('p.first').fadeIn(6000).fadeOut(2000),
 	$('p.second').fadeIn(10000).fadeOut(2000),
 	$('p.third').fadeIn(15000).fadeOut(4000);
 }),
 
 // subsection / drawer functionality
+
 $('ul li').click(function() {
 	var activeTab = $(this).attr('id'), // clicked tab
 		activeHypnoText = $('header p.' + activeTab), // corresponding hypnoText
 		allHypnoText = $('header p');
 
-	if ($(this).hasClass('active')) { // when clicking an already-open tab
+	if ($(this).hasClass('active')) {
+	// when clicking an already-open tab
 
-		$(this).removeClass('active') // deactivate
-			   .children('div').slideUp(), // hide text
+		$(this).removeClass('active') // deactivate and hide text
+			   .children('div')
+			   .slideUp(),
+
 		allHypnoText.fadeOut(1000); // hide accompanying hypnoText
 
 	} else {
