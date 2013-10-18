@@ -5,13 +5,16 @@ $(document).ready(function() {
 	$('#spiral').css({
 				transformOrigin: '120px 120px' // center transform
 				}).transition({
-					rotate:'360deg' // do one slow spin
-				}, 20000).stop(),
+					rotate:'720deg' // do two slow spins
+				}, 25000).stop()
 
 	// hynpoText fades in and then out
-	$('p.first').fadeIn(6000).fadeOut(2000),
-	$('p.second').fadeIn(10000).fadeOut(2000),
-	$('p.third').fadeIn(15000).fadeOut(4000);
+	$('p.first').fadeIn(2000).fadeOut(2000, function() {
+		$('p.second').fadeIn(2000).fadeOut(2000, function() {
+			$('p.third').fadeIn(4000).fadeOut(2000)
+		})
+	})
+
 }),
 
 // subsection / drawer functionality
