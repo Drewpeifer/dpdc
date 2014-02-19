@@ -1,165 +1,43 @@
+
 body {
+	background:#222;
+}
+body, #wrapper, .starfield {
 	height:100%;
 	width:100%;
-	background:#111 url(../img/bg-repeat-flip.png) right top repeat-y;
-	padding:5px;
-	overflow:visible;
 }
 p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	color:#f2f2f2;
 	font-family:'Graduate', cursive;
 	font-weight:normal;
-}
-#wrapper > div {
-	cursor:pointer;
-}
-#wrapper {
-	width:auto;
-	max-width:900px;
-	z-index:2;
-	position:relative;
-	left:5px;
-}
-/* colors */
-
-header h1 b,
-ul li div p b {
-	color:#FFC83F;
-}
-ul li > p {
-	border-left:#FFC83F 10px solid;
-}
-ul li  div p a {
-	color:#99cccc;
-}
-/* */
-
-header {
-	padding:20px 0;
-}
-header h1 {
-	font-size:32px;
-}
-header h1 b {
-}
-header p {
-	font-size:10px;
-	position:absolute;
-}
-p.second {
-	left:10px;
-	top:15px;
-}
-p.third {
-	left:165px;
-}
-
-/* drawer and content */
-ul {
-	display:inline-block;
-	max-width:900px;
-}
-ul li {
-	width:100%;
-	padding:10px;
-	padding-left:0;
 	list-style:none;
 }
-ul li > p {
-	font-size:24px;
-	padding-left:5px;
-}
-ul li div {
-	margin:0;
-	padding:10px;
-	border-left:#FFC83F 10px solid;
-}
-ul li div p,
-ul li div a {
-	font-size:14px;
-	color:#f2f2f2;
-	font-family:monospace;
-	line-height:16px;
-}
-ul li div a {
-	text-decoration:none;
+a {
+	color:#ccaa00;
 }
 
-/* spiral */
-
-/*
-	the spiral is just a series of squares,
-	centered within each other, with borders
-	that appear to connect. Each set of 4 squares
-	completes one revolution and the pattern
-	repeats
-
-	http://fu2k.org/alex/css/test/Spiral.mhtml
-
-	I added border-radius to this demo, resized,
-	and jQuery does the spin.
-*/
-
-#spiral {
-	height:250px;
-	width:250px;
+.main {
+	position:relative;
+	z-index:3;
+}
+/* stars */
+.star {
+	height:1px;
+	width:1px;
+	border-radius:2px;
+	background:#f2f2f2;
+	margin:20px;
+	-moz-box-shadow:    0 0 10px 3px #f2f2f2;
+	-webkit-box-shadow: 0 0 10px 3px #f2f2f2;
+	box-shadow:         0 0 10px 3px #f2f2f2;
+	position:absolute;
+}
+#starfield {
 	position:absolute;
 	top:0;
-	left:0;
-	opacity:.2;
-	z-index:-1;
+	height:100%;
+	width:100%;
+	background:transparent;
+	z-index:2;
+	overflow:hidden;
 }
-.container
-	{
-	position			: absolute;
-	top					: 0px;
-	left				: 0px;
-	width				: 250px;
-	height				: 250px;
-	margin				: 0px;
-	padding				: 0px;
-	border				: solid 0px #000000;
-	z-index:1;
-	}
-.spiral1, .spiral2, .spiral3, .spiral4
-	{
-	position			: absolute;
-	width				: 85%;
-	height				: 85%;
-	margin				: 0px;
-	padding				: 0px;
-	background-color	: #000000;
-	border				: solid 0px #000000;
-	border-radius:50%;
-	}
-
-.spiral1
-	{
-	left				: 0px;
-	top					: 0px;
-	border-left			: none;
-	border-top			: none;
-	background-color	: #FFC83F;
-	}
-.spiral2
-	{
-	left				: 0px;
-	bottom				: 0px;
-	border-left			: none;
-	border-bottom		: none;
-	}
-.spiral3
-	{
-	right				: 0px;
-	bottom				: 0px;
-	border-right		: none;
-	border-bottom		: none;
-	background-color	: #FFC83F;
-	}
-.spiral4
-	{
-	right				: 0px;
-	top					: 0px;
-	border-right		: none;
-	border-top			: none;
-	}

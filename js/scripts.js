@@ -1,46 +1,38 @@
-$(document).ready(function() {
-	$('#nav div').hide(), // hide subsections
-	$('header p').hide(), // hide hypnoText
-	$('#wrapper').fadeIn(), // fade everything else in
-	$('#spiral').css({
-				transformOrigin: '120px 120px' // center transform
-				}).transition({
-					rotate:'720deg' // do two slow spins
-				}, 25000).stop()
+$(function() {
+	var star = '<div class="star"></div>',
+		starField = $('#starfield');
 
-	// hynpoText fades in and then out
-	$('p.first').fadeIn(2000).fadeOut(2000, function() {
-		$('p.second').fadeIn(2000).fadeOut(2000, function() {
-			$('p.third').fadeIn(4000).fadeOut(2000)
-		})
-	})
+	for (var i = 0; i < 20; i++) {
 
-}),
+		randoTop = Math.floor(Math.random() * 100),
+		randoLeft = Math.floor(Math.random() * 100),
+		colorA = '#fff',// white
+		colorB = '#ffffee',// yellow
+		colorC = '#ccffff',// blue
+		colors = [colorA, colorB, colorC],
+		randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-// subsection / drawer functionality
+		$(star).appendTo(starField)
+			   .css({
+					'top': randoTop + '%',
+					'left': randoLeft + '%',
+					'background': randomColor,
+					'-moz-box-shadow':    '0 0 10px 3px ' + randomColor,
+					'-webkit-box-shadow': '0 0 10px 3px ' + randomColor,
+					'box-shadow':         '0 0 10px 3px ' + randomColor
+			   }).addClass('' + i + ''),
 
-$('ul li').click(function() {
-	var activeTab = $(this).attr('id'), // clicked tab
-		activeHypnoText = $('header p.' + activeTab), // corresponding hypnoText
-		allHypnoText = $('header p');
-
-	if ($(this).hasClass('active')) {
-	// when clicking an already-open tab
-
-		$(this).removeClass('active') // deactivate and hide text
-			   .children('div')
-			   .slideUp(),
-
-		allHypnoText.fadeOut(1000); // hide accompanying hypnoText
-
-	} else {
-
-		$('ul li.active div').slideUp(), // hide any active text
-		$('ul li').removeClass('active'), // deactivate any active tabs
-		$(this).addClass('active') // activate this tab
-			   .children('div').slideDown(), // reveal text
-		allHypnoText.hide(), // hide any visible hypnoText
-		activeHypnoText.fadeIn(2000); // reveal accompanying hypnoText
-
+			   console.log(randomColor);
 	}
+
+	$('button').click(function() {
+		$('.star').transition({
+			width: '+=300',
+			duration:3000
+		}).transition({
+			left:'+=100',
+			duration: 3000,
+			easing: 'snap'
+		});
+	});
 });
