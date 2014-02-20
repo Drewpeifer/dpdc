@@ -1,4 +1,4 @@
-$(function() {
+function makeStars() {
 	var star = '<div class="star"></div>',
 		starField = $('#starfield');
 
@@ -20,24 +20,31 @@ $(function() {
 					'-moz-box-shadow':    '0 0 10px 3px ' + randomColor,
 					'-webkit-box-shadow': '0 0 10px 3px ' + randomColor,
 					'box-shadow':         '0 0 10px 3px ' + randomColor
-			   }).addClass('' + i + '');
+			   }).attr('data-val', '' + i + '');
 	}
 
 	console.log('stars are built')
+}
+
+
+// ready set go
+$(function() {
+	
+	makeStars(), // Build the skies!
+
+
 
 	$('button').click(function() {
 		$('.star').transition({
-			width: '+=300',
-			duration:3000
-		}),
-		starField.transition({
-			x:'-=30',
-			duration: 3000,
-			easing: 'snap'
-		}).transition({
-			x:'+=1050',
-			duration: 600
-		});
+			x:'+=1000',
+			duration:500000
+		})
+		.filter(':nth-child(3n)')
+		.stop()
+		.transition({
+			x:'+=1000',
+			duration:400000
+		})
 	})
 
 });
