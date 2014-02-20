@@ -2,7 +2,7 @@ function makeStars() {
 	var star = '<div class="star"></div>',
 		starField = $('#starfield');
 
-	for (var i = 0; i < 15; i++) {
+	for (var i = 0; i < 2; i++) {
 
 		randoTop = Math.floor(Math.random() * 100),
 		randoLeft = Math.floor(Math.random() * 100),
@@ -26,25 +26,56 @@ function makeStars() {
 	console.log('stars are built')
 }
 
+function starCrawl() {
+	var stars = $('.star');
+
+	stars.each(function(i,obj) {
+		var position = $(this).offset(),
+			starLeft = position.left,
+			fieldWidth = $('#starfield').width();
+
+		$(this).animate({
+			x:((fieldWidth + 6) - starLeft),
+			duration:5000,
+			easing:'linear'
+		}, {
+			step: function(starLeft,fieldWidth) {
+				if (starLeft >= $('#starfield').width()) {
+					console.log('whoa ' + starLeft)
+				} else {
+					// never do anything here
+				}
+			}
+		})
+
+
+	})
+
+
+	// set varying speeds increments for stars
+	// $('.star').transition({
+	// 	x:'+=1000',
+	// 	duration:10000
+	// })
+	// .filter(':nth-child(2n)')
+	// .stop()
+	// .transition({
+	// 	x:'+=1000',
+	// 	duration:400000
+	// })
+	// .filter(':nth-child(3n)')
+	// .stop()
+	// .transition({
+	// 	x:'+=1000',
+	// 	duration:300000
+	// })
+}
+
 
 // ready set go
 $(function() {
-	
-	makeStars(), // Build the skies!
 
-
-
-	$('button').click(function() {
-		$('.star').transition({
-			x:'+=1000',
-			duration:500000
-		})
-		.filter(':nth-child(3n)')
-		.stop()
-		.transition({
-			x:'+=1000',
-			duration:400000
-		})
-	})
+	makeStars(), // build stars
+	starCrawl() // set them in motion
 
 });
