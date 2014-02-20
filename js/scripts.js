@@ -1,8 +1,9 @@
+
+
 function makeStars() {
 	var star = '<div class="star"></div>',
-		starField = $('#starfield');
+		starField = $('#starfield'),
 
-	for (var i = 0; i < 2; i++) {
 
 		randoTop = Math.floor(Math.random() * 100),
 		randoLeft = Math.floor(Math.random() * 100),
@@ -20,62 +21,65 @@ function makeStars() {
 					'-moz-box-shadow':    '0 0 10px 3px ' + randomColor,
 					'-webkit-box-shadow': '0 0 10px 3px ' + randomColor,
 					'box-shadow':         '0 0 10px 3px ' + randomColor
-			   }).attr('data-val', '' + i + '');
-	}
+			   })
 
-	console.log('stars are built')
-}
+	function starCrawl(starField) {
+		var stars = $('.star');
 
-function starCrawl() {
-	var stars = $('.star');
+		stars.each(function(i,obj) {
+			var position = $(this).offset(),
+				starLeft = position.left,
+				fieldWidth = $('#starfield').width();
 
-	stars.each(function(i,obj) {
-		var position = $(this).offset(),
-			starLeft = position.left,
-			fieldWidth = $('#starfield').width();
-
-		$(this).animate({
-			x:((fieldWidth + 6) - starLeft),
-			duration:5000,
-			easing:'linear'
-		}, {
-			step: function(starLeft,fieldWidth) {
-				if (starLeft >= $('#starfield').width()) {
-					console.log('whoa ' + starLeft)
-				} else {
-					// never do anything here
+			$(this).animate({
+					x:((fieldWidth + 10) - starLeft)
+				}, {
+					duration:5000,
+					step: function(now) {
+						console.log((now + starLeft) + ' ' + fieldWidth)
+						if (starLeft.now == fieldWidth) {
+							$(this).remove(),
+							console.log('its gone'),
+							makeStars()
+						} else {
+							// never do anything here
+						}
 				}
-			}
+			});
+
+
 		})
 
 
-	})
+		// set varying speeds increments for stars
+		// $('.star').transition({
+		// 	x:'+=1000',
+		// 	duration:10000
+		// })
+		// .filter(':nth-child(2n)')
+		// .stop()
+		// .transition({
+		// 	x:'+=1000',
+		// 	duration:400000
+		// })
+		// .filter(':nth-child(3n)')
+		// .stop()
+		// .transition({
+		// 	x:'+=1000',
+		// 	duration:300000
+		// })
+	}
 
 
-	// set varying speeds increments for stars
-	// $('.star').transition({
-	// 	x:'+=1000',
-	// 	duration:10000
-	// })
-	// .filter(':nth-child(2n)')
-	// .stop()
-	// .transition({
-	// 	x:'+=1000',
-	// 	duration:400000
-	// })
-	// .filter(':nth-child(3n)')
-	// .stop()
-	// .transition({
-	// 	x:'+=1000',
-	// 	duration:300000
-	// })
+	console.log('star has been built, starting crawl'),
+	starCrawl() // set them in motion
+
 }
 
 
 // ready set go
 $(function() {
 
-	makeStars(), // build stars
-	starCrawl() // set them in motion
+	makeStars() // build stars
 
 });
