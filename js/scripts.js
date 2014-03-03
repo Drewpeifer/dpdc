@@ -5,7 +5,8 @@ var star = '<div class="new star"></div>', // generic baby star
 	colorB = '#ffffee',// yellow
 	colorC = '#ccffff',// blue
 	colors = [colorA, colorB, colorC]
-	starCount = 1; // for debugging
+	starCount = 1, // for debugging
+	starCap = 5; // limits the number of stars on the screen
 
 // starCrawl() sets the newest star created into motion
 function starCrawl(starField) {
@@ -17,7 +18,7 @@ function starCrawl(starField) {
 				  .animate({
 			x:(fieldWidth) // move it offscreen
 		}, {
-			duration:5000,
+			duration:8000,
 			easing: 'linear',
 			step: function(now) {
 				if ((now + starLeft) >= fieldWidth) { // when star goes offscreen
@@ -52,8 +53,16 @@ function makeOneStar() {
 		}),
 	
 	++starCount,
+	console.log('starCount is ' + starCount),
 	// console.log('star number ' + starCount + ' has been built'),
-	starCrawl(); // set this star into motion
+	starCrawl() // set this star into motion
+
+	// here is where the incremental events are fired off
+	if (starCount % 10 == 0) {
+		
+	} else if (starCount % 5 == 0) {
+		
+	} else {}
 }
 
 // makeManyStars() runs on the initial page load, and determines
@@ -61,7 +70,7 @@ function makeOneStar() {
 // as well as the initial random position and colors of the first stars
 function makeManyStars() {
 
-	for (var i = 0; i < 5; i++) { // this line controls star count
+	for (var i = 0; i < starCap; i++) {
 
 		randoTop = Math.floor(Math.random() * 100),
 		randoLeft = Math.floor(Math.random() * 100),
