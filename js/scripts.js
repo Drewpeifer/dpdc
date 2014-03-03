@@ -4,21 +4,24 @@ var star = '<div class="new star"></div>', // generic baby star
 	colorA = '#fff',// white
 	colorB = '#ffffee',// yellow
 	colorC = '#ccffff',// blue
-	colors = [colorA, colorB, colorC]
+	colors = [colorA, colorB, colorC],
+	speeds = [5000, 8000, 10000, 15000],
 	starCount = 1, // for debugging
 	starCap = 5; // limits the number of stars on the screen
 
 // starCrawl() sets the newest star created into motion
+// with a random speed
 function starCrawl(starField) {
 	var position = $('.new.star').offset(),
 		starLeft = position.left,
-		fieldWidth = $('#starfield').width();
+		fieldWidth = $('#starfield').width(),
+		randoSpeed = speeds[Math.floor(Math.random() * speeds.length)];
 
 	$('.new.star').removeClass('new') // star becomes an adult
 				  .animate({
 			x:(fieldWidth) // move it offscreen
 		}, {
-			duration:8000,
+			duration: randoSpeed,
 			easing: 'linear',
 			step: function(now) {
 				if ((now + starLeft) >= fieldWidth) { // when star goes offscreen
@@ -40,16 +43,16 @@ function starCrawl(starField) {
 function makeOneStar() {
 
 	randoTop = Math.floor(Math.random() * 100),
-	randomColor = colors[Math.floor(Math.random() * colors.length)];
+	randoColor = colors[Math.floor(Math.random() * colors.length)];
 
 	$(star).appendTo(starField)
 		   .css({
 				'top': randoTop + '%',
 				'left': 0,
-				'background': randomColor,
-				'-moz-box-shadow':    '0 0 10px 3px ' + randomColor,
-				'-webkit-box-shadow': '0 0 10px 3px ' + randomColor,
-				'box-shadow':         '0 0 10px 3px ' + randomColor
+				'background': randoColor,
+				'-moz-box-shadow':    '0 0 10px 3px ' + randoColor,
+				'-webkit-box-shadow': '0 0 10px 3px ' + randoColor,
+				'box-shadow':         '0 0 10px 3px ' + randoColor
 		}),
 	
 	++starCount,
@@ -74,16 +77,16 @@ function makeManyStars() {
 
 		randoTop = Math.floor(Math.random() * 100),
 		randoLeft = Math.floor(Math.random() * 100),
-		randomColor = colors[Math.floor(Math.random() * colors.length)];
+		randoColor = colors[Math.floor(Math.random() * colors.length)];
 
 		$(star).appendTo(starField)
 			   .css({
 					'top': randoTop + '%',
 					'left': randoLeft + '%',
-					'background': randomColor,
-					'-moz-box-shadow':    '0 0 10px 3px ' + randomColor,
-					'-webkit-box-shadow': '0 0 10px 3px ' + randomColor,
-					'box-shadow':         '0 0 10px 3px ' + randomColor
+					'background': randoColor,
+					'-moz-box-shadow':    '0 0 10px 3px ' + randoColor,
+					'-webkit-box-shadow': '0 0 10px 3px ' + randoColor,
+					'box-shadow':         '0 0 10px 3px ' + randoColor
 			   }),
 
 		starCrawl(); // set each star into motion
