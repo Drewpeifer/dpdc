@@ -36,13 +36,15 @@ function makeStars() {
 				fieldWidth = $('#starfield').width();
 
 			$(this).animate({
-					x:((fieldWidth + 100) - starLeft)
+					x:((fieldWidth + 100) - starLeft) // 100 is arbitrary
 				}, {
 					duration:5000,
 					step: function(now) {
 						if ((now + starLeft) >= fieldWidth) {
-
-							console.log('its gone')
+							console.log('its gone now'),
+							$(this).stop()
+								   .remove(),
+							makeStars();
 						} else {
 							// never do anything here
 						}
