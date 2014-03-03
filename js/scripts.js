@@ -2,8 +2,9 @@
 
 function makeStars() {
 	var star = '<div class="star"></div>',
-		starField = $('#starfield'),
+		starField = $('#starfield');
 
+	for (var i = 0; i < 1; i++) {
 
 		randoTop = Math.floor(Math.random() * 100),
 		randoLeft = Math.floor(Math.random() * 100),
@@ -23,6 +24,9 @@ function makeStars() {
 					'box-shadow':         '0 0 10px 3px ' + randomColor
 			   })
 
+	}
+
+
 	function starCrawl(starField) {
 		var stars = $('.star');
 
@@ -32,15 +36,13 @@ function makeStars() {
 				fieldWidth = $('#starfield').width();
 
 			$(this).animate({
-					x:((fieldWidth + 10) - starLeft)
+					x:((fieldWidth + 100) - starLeft)
 				}, {
 					duration:5000,
 					step: function(now) {
-						console.log((now + starLeft) + ' ' + fieldWidth)
-						if (starLeft.now == fieldWidth) {
-							$(this).remove(),
-							console.log('its gone'),
-							makeStars()
+						if ((now + starLeft) >= fieldWidth) {
+
+							console.log('its gone')
 						} else {
 							// never do anything here
 						}
