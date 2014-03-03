@@ -1,15 +1,16 @@
 var star = '<div class="new star"></div>', // generic baby star
 	allStars = $('.star'), // every star
 	starField = $('#starfield'), // wrapper of allStars
+	starCount = 1, // for debugging
+	starCap = 5, // limits the number of stars on the screen
 	colors = [
 				'#FFF',// white
 				'#FFE697',// yellow
 				'#A5D8FF',// blue
 				'#FF8D95' // red
 			],
-	speeds = [5000, 8000, 10000, 15000],
-	starCount = 1, // for debugging
-	starCap = 5; // limits the number of stars on the screen
+	speeds = [5000, 8000, 10000, 15000];
+
 
 // starCrawl() sets the newest star created into motion
 // with a random speed
@@ -27,9 +28,10 @@ function starCrawl(starField) {
 			easing: 'linear',
 			step: function(now) {
 				if ((now + starLeft) >= fieldWidth) { // when star goes offscreen
-					// console.log('a star has died'),
+					
 					$(this).stop() // stop animation
 						   .remove(), // implode this star
+					console.log('a star has died'),
 					makeOneStar() // make a new star
 				} else {
 					// never do anything here,
@@ -45,7 +47,8 @@ function starCrawl(starField) {
 function makeOneStar() {
 
 	randoTop = Math.floor(Math.random() * 100),
-	randoColor = colors[Math.floor(Math.random() * colors.length)];
+	randoColor = colors[Math.floor(Math.random() * colors.length)],
+	randoSpeed = speeds[Math.floor(Math.random() * speeds.length)];
 
 	$(star).appendTo(starField)
 		   .css({
@@ -58,16 +61,35 @@ function makeOneStar() {
 		}),
 	
 	++starCount,
-	console.log('starCount is ' + starCount),
-	// console.log('star number ' + starCount + ' has been built'),
-	starCrawl() // set this star into motion
+	console.log('a star is born, starCount is now ' + starCount)
 
 	// here is where the incremental events are fired off
-	if (starCount % 10 == 0) {
-		
-	} else if (starCount % 5 == 0) {
-		
-	} else {}
+	if (starCount % 20 == 0) {
+
+	} else if (starCount % 12 == 0) {
+
+	} else if (starCount % 4 == 0) {
+		// convert newest star to UFO
+		$('.new.star')
+			.css({
+			'width':'32px',
+			'height':'27px',
+			'background':'url(img/ufo.png) no-repeat transparent',
+			'-moz-box-shadow': 'none',
+			'-webkit-box-shadow': 'none',
+			'box-shadow':         'none'
+		}).animate({
+			y:'+' + randoTop
+		}, {
+			queue:false,
+			duration:randoSpeed
+		})
+	} else if (starCount % 2 == 0) {
+		$('.new.star').addClass('flare')
+	}
+
+	starCrawl(); // set this star into motion
+
 }
 
 // makeManyStars() runs on the initial page load, and determines
@@ -95,6 +117,10 @@ function makeManyStars() {
 
 	}
 }
+
+$('button').click(function() {
+	
+})
 
 // When page is loaded, do the following...
 $(function() {
