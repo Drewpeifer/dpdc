@@ -1,10 +1,12 @@
 var star = '<div class="new star"></div>', // generic baby star
 	allStars = $('.star'), // every star
 	starField = $('#starfield'), // wrapper of allStars
-	colorA = '#fff',// white
-	colorB = '#ffffee',// yellow
-	colorC = '#ccffff',// blue
-	colors = [colorA, colorB, colorC],
+	colors = [
+				'#FFF',// white
+				'#FFE697',// yellow
+				'#A5D8FF',// blue
+				'#FF8D95' // red
+			],
 	speeds = [5000, 8000, 10000, 15000],
 	starCount = 1, // for debugging
 	starCap = 5; // limits the number of stars on the screen
