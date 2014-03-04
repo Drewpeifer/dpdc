@@ -21,6 +21,15 @@ a {
 	z-index:3;
 }
 /* stars */
+#starfield {
+	position:absolute;
+	top:0;
+	height:100%;
+	width:100%;
+	background:transparent;
+	z-index:2;
+	overflow:hidden;
+}
 .star {
 	height:1px;
 	width:1px;
@@ -37,22 +46,7 @@ a {
 	width:3px;
 }
 
-#starfield {
-	position:absolute;
-	top:0;
-	height:100%;
-	width:100%;
-	background:transparent;
-	z-index:2;
-	overflow:hidden;
-}
-
-/* ufo test */
-.test {
-	margin:50px;
-	height:100px;
-	width:100px;
-}
+/* ufo */
 .star.ufo {
 	height:10px;
 	width:30px;
