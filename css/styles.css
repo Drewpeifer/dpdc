@@ -7,8 +7,8 @@ body, #wrapper, .starfield {
 	width:100%;
 }
 p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
-	color:#f2f2f2;
-	font-family:'Graduate', cursive;
+	color:#888;
+	font-family: 'Nova Square', cursive;
 	font-weight:normal;
 	list-style:none;
 }
@@ -45,4 +45,40 @@ a {
 	background:transparent;
 	z-index:2;
 	overflow:hidden;
+}
+
+/* ufo test */
+.test {
+	margin:50px;
+	height:100px;
+	width:100px;
+}
+.star.ufo {
+	height:10px;
+	width:30px;
+	background:#333;
+	-moz-border-radius: 10px / 5px;
+	-webkit-border-radius: 10px / 5px;
+	border-radius: 10px / 5px;
+	border-bottom:#666 2px solid;
+	overflow:visible;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+.dome {
+	height:2px;
+	width:13px;
+	background:#999;
+	border:none;
+	border-top:#999 5px solid;
+	border-bottom:#999 1px solid;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 2px 2px;
+	border-radius: 5px 5px 2px 2px;
+	position:relative;
+	left:8px;
+	top:-3px;
+	opacity:.6;
 }

@@ -11,7 +11,7 @@ var star = '<div class="new star"></div>', // generic baby star
 			],
 	speeds = [5000, 8000, 10000, 15000];
 
-
+////////////////////////////////
 // starCrawl() sets the newest star created into motion
 // with a random speed
 function starCrawl(starField) {
@@ -22,25 +22,26 @@ function starCrawl(starField) {
 
 	$('.new.star').removeClass('new') // star becomes an adult
 				  .animate({
-			x:(fieldWidth) // move it offscreen
-		}, {
-			duration: randoSpeed,
-			easing: 'linear',
-			step: function(now) {
-				if ((now + starLeft) >= fieldWidth) { // when star goes offscreen
+					x:(fieldWidth) // move it offscreen
+				}, {
+					duration: randoSpeed,
+					easing: 'linear',
+					step: function(now) {
+						if ((now + starLeft) >= fieldWidth) { // when star goes offscreen
 					
-					$(this).stop() // stop animation
-						   .remove(), // implode this star
-					console.log('a star has died'),
-					makeOneStar() // make a new star
-				} else {
-					// never do anything here,
-					// or your browser may explode
+							$(this).stop() // stop animation
+						   		   .remove(), // implode this star
+							console.log('a star has died'),
+							makeOneStar() // make a new star
+						} else {
+							// never do anything here,
+							// or your browser may explode
+						}
 				}
-			}
-		});
+	});
 }
 
+////////////////////////////////
 // makeOneStar() does exactly what it sounds like,
 // creating a new star with a random color and
 // vertical position
@@ -71,15 +72,16 @@ function makeOneStar() {
 	} else if (starCount % 4 == 0) {
 		// convert newest star to UFO
 		$('.new.star')
+			.addClass('ufo')
+			.html('<div class="dome"></div>')
 			.css({
-			'width':'32px',
-			'height':'27px',
-			'background':'url(img/ufo.png) no-repeat transparent',
-			'-moz-box-shadow': 'none',
-			'-webkit-box-shadow': 'none',
-			'box-shadow':         'none'
-		}).animate({
-			y:'+' + randoTop
+				'background':'#444',
+				'-moz-box-shadow':'none',
+				'-webkit-box-shadow':'none',
+				'box-shadow':'none'
+				}) // needs set dynamically or else star prop wins
+			.animate({
+			y: +100
 		}, {
 			queue:false,
 			duration:randoSpeed
@@ -92,6 +94,7 @@ function makeOneStar() {
 
 }
 
+////////////////////////////////
 // makeManyStars() runs on the initial page load, and determines
 // the total number of stars on the screen at any time,
 // as well as the initial random position and colors of the first stars
@@ -118,10 +121,7 @@ function makeManyStars() {
 	}
 }
 
-$('button').click(function() {
-	
-})
-
+////////////////////////////////
 // When page is loaded, do the following...
 $(function() {
 
