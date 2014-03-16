@@ -133,12 +133,53 @@ $(function() {
 	})
 
 	$('#stretch').click(function() {
+
+		bodyWidth = $('body').width();
+
 		$('.star').animate({
 			'width':'100px'
+		}).transition({
+			'left': bodyWidth
 		});
 	})
 
 	$('#warp').click(function() {
-		$('.star').stop();
+
+		bodyWidth = $('body').width();
+
+		for (var i = 0; i < 40; i++) {
+
+			randoTop = Math.floor(Math.random() * 100),
+			randoOpacity = Math.floor(Math.random() * 10),
+			randoColor = colors[Math.floor(Math.random() * colors.length)];
+
+			$(star).appendTo(starField)
+				   .css({
+						'top': randoTop + '%',
+						'left': '-20px',
+						'background': randoColor,
+						'-moz-box-shadow':    '0 0 10px 3px ' + randoColor,
+						'-webkit-box-shadow': '0 0 10px 3px ' + randoColor,
+						'box-shadow':         '0 0 10px 3px ' + randoColor,
+						'opacity': '.' + randoOpacity
+					}).animate({
+						'width': bodyWidth
+					})
+
+		}
+	})
+
+	$('#oscillate').click(function() {
+		function oscillate() {
+			$('.star').transition({
+				y: +10,
+				duration: 2000
+			}).transition({
+				y: -10,
+				duration: 2000
+			})
+		}
+		
+		oscillate();
 	})
 });
