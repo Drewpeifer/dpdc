@@ -67,9 +67,9 @@ function makeOneStar() {
 	// here is where the incremental events are fired off
 	if (starCount % 20 == 0) {
 
-	} else if (starCount % 12 == 0) {
+	} else if (starCount % 15 == 0) {
 
-	} else if (starCount % 4 == 0) {
+	} else if (starCount % 10 == 0) {
 		// convert newest star to UFO
 		$('.new.star')
 			.addClass('ufo')
@@ -86,7 +86,7 @@ function makeOneStar() {
 			queue:false,
 			duration:randoSpeed
 		})
-	} else if (starCount % 2 == 0) {
+	} else if (starCount % 4 == 0) {
 		$('.new.star').addClass('flare')
 	}
 
@@ -121,10 +121,24 @@ function makeManyStars() {
 	}
 }
 
+
 ////////////////////////////////
 // When page is loaded, do the following...
 $(function() {
 
 	makeManyStars(); // build the first new stars
 
+	$('#stop').click(function() {
+		$('.star').stop();
+	})
+
+	$('#stretch').click(function() {
+		$('.star').animate({
+			'width':'100px'
+		});
+	})
+
+	$('#warp').click(function() {
+		$('.star').stop();
+	})
 });
