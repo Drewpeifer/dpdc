@@ -121,8 +121,13 @@ function makeManyStars() {
 	}
 }
 
+//////////////////////////
+// Empties out the starField of all stars,
+// currently called when returning to impulse from warp
+// TODO: make transition much smoother
 function killAllStars() {
-	starField.empty();
+	$('.star').finish().remove(),
+	makeManyStars();
 }
 
 // controls
@@ -190,11 +195,11 @@ $('#engage').click(function() {
 
 $('#impulse').click(function() {
 	console.log('returning to impulse'),
-	$('.star').stop().transition({ width: '1px', left: '-1000px' }, killAllStars),
+	$('.star').stop().transition({ width: '1px', left: '-1000px' }),
 	$(this).hide(),
 	$('#engage').show();
 
-});
+}, killAllStars);
 
 ////////////////////////////////
 // When page is loaded, do the following...
