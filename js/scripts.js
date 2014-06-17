@@ -121,33 +121,21 @@ function makeManyStars() {
 	}
 }
 
+function killAllStars() {
+	starField.empty();
+}
 
-////////////////////////////////
-// When page is loaded, do the following...
-$(function() {
+// controls
+$('#engage').click(function() {
+	
+	bodyWidth = $('body').width();
 
-	makeManyStars(); // build the first new stars
+	$('.star').stop(); // hammer time
 
-	$('#stop').click(function() {
-		$('.star').stop();
-	})
-
-	$('#stretch').click(function() {
-
-		bodyWidth = $('body').width();
-
-		$('.star').animate({
-			'width':'100px'
-		}).transition({
-			'left': bodyWidth
-		});
-	})
-
-	$('#warp').click(function() {
-
-		bodyWidth = $('body').width();
-
-		for (var i = 0; i < 40; i++) {
+	// creates long bars of light L to R
+	function warp() {
+		console.log('warp');
+		for (var i = 0; i < 15; i++) {
 
 			randoTop = Math.floor(Math.random() * 100),
 			randoOpacity = Math.floor(Math.random() * 10),
@@ -167,19 +155,52 @@ $(function() {
 					})
 
 		}
-	})
 
-	$('#oscillate').click(function() {
-		function oscillate() {
-			$('.star').transition({
-				y: +10,
-				duration: 2000
-			}).transition({
-				y: -10,
-				duration: 2000
-			})
-		}
-		
-		oscillate();
-	})
+		// oscillate after warp
+		$('.star').animate({
+					y: +5,
+					opacity: .2
+				}, {duration:2000})
+				  .animate({
+					y: 0,
+					opacity: .8
+				}, {duration:2000})
+				  .animate({
+					y: -5,
+					opacity: .4
+				}, {duration:2000})
+				  .animate({
+					y: 0,
+					opacity: .6
+				}, {duration:2000});
+	}
+
+	// zoom current stars offscreen,
+	// then warp (and oscillate)
+	$('.star').animate({
+		'width':'100px'
+	}).transition({
+		'left': bodyWidth
+	});
+	
+	warp(),
+	$(this).hide(),
+	$('#impulse').show();
+});
+
+$('#impulse').click(function() {
+	console.log('returning to impulse'),
+	$('.star').stop().transition({ width: '1px', left: '-1000px' }, killAllStars),
+	$(this).hide(),
+	$('#engage').show();
+
+});
+
+////////////////////////////////
+// When page is loaded, do the following...
+$(function() {
+
+	makeManyStars(); // build the first new stars
+
+
 });
