@@ -6,7 +6,7 @@ body, #wrapper, .starfield {
 	height:100%;
 	width:100%;
 }
-p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
+body, p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	color:#888;
 	font-family: 'Nova Square', cursive;
 	font-weight:normal;
@@ -20,6 +20,21 @@ a {
 	position:relative;
 	z-index:3;
 }
+
+/* text */
+h1 {
+	font-size:36px;
+	border:#f2f2f2 1px solid;
+	border-left:none;
+	border-radius:0 25px 25px 0;
+	border-width:4px 2px 1px;
+	border-bottom-color:#666;
+	border-right-color:#777;
+	height:55px;
+	width:60%;
+	padding-top:10px;	
+}
+
 /* stars */
 #starfield {
 	position:absolute;
