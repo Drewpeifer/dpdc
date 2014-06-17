@@ -127,7 +127,9 @@ function makeManyStars() {
 // TODO: make transition much smoother
 function killAllStars() {
 	$('.star').finish().remove(),
-	makeManyStars();
+	makeManyStars(),
+	$(this).hide(),
+	$('#engage').show();
 }
 
 // controls
