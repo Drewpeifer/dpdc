@@ -84,6 +84,9 @@ ul li div a {
 ul li div a {
 	text-decoration:none;
 }
+ul li div p i {
+	text-transform:none;
+}
 
 /* spiral */
 
