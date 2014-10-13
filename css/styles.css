@@ -25,14 +25,29 @@ header h1 b {
 	font-weight:bold;
 }
 header h1 {
-	color:#f2f2f2;
+	color:#999;
 	padding-bottom:20px;
+	font-size:32px;
 }
 header h1 b {
-	color:#999;
+	color:#f2f2f2;
 }
 
-/* */
-header h1 {
-	font-size:32px;
+/* nav */
+#nav {
+	width:30%;
+}
+#nav li {
+	display:inline-block;
+	width:30%;
+	text-align:left;
+}
+
+/* articles */
+.articles div {
+	padding-top:20px;
+}
+.articles div p {
+	font-size:14px;
+	font-weight:normal;
 }
