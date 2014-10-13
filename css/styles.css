@@ -13,7 +13,7 @@ body {
 /* colors */
 p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	color:#f2f2f2;
-	font-family:helvetica;
+	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight:normal;
 }
 body {
@@ -27,7 +27,7 @@ header h1 b {
 header h1 {
 	color:#999;
 	padding-bottom:20px;
-	font-size:32px;
+	font-size:42px;
 }
 header h1 b {
 	color:#f2f2f2;
@@ -42,12 +42,24 @@ header h1 b {
 	width:30%;
 	text-align:left;
 }
+#nav li h2 {
+	font-size:24px;
+	font-weight:bold;
+	letter-spacing:1px;
+}
+#nav li:hover,
+#nav li.active {
+	text-decoration:underline;
+}
 
 /* articles */
+.articles {
+	width:40%;
+}
 .articles div {
 	padding-top:20px;
 }
 .articles div p {
-	font-size:14px;
-	font-weight:normal;
+	font-size:16px;
+	margin-bottom:5px;
 }
