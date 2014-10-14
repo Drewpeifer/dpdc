@@ -63,5 +63,13 @@ header h1 b {
 }
 .articles div p {
 	font-size:16px;
-	margin-bottom:5px;
+	margin-bottom:20px;
+}
+a.src {
+	height:16px;
+	width:40px;
+	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	display:inline-block;
+	border-radius:3px;
 }
