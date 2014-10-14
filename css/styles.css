@@ -65,11 +65,29 @@ header h1 b {
 	font-size:16px;
 	margin-bottom:20px;
 }
-a.src {
+a.github,
+a.linkedin,
+a.xbox {
 	height:16px;
 	width:40px;
 	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
 	background-size:contain; /* not so sure about this */
 	display:inline-block;
 	border-radius:3px;
+	text-decoration:none;
+}
+#contact a {
+	height:34px;
+	width:80px;
+	margin-right:20px;
+}
+#contact a.linkedin {
+	background:transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	width:40px;
+}
+#contact a.xbox {
+	background:transparent url(../img/xbox_logo.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	width:40px;
 }
