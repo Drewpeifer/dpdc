@@ -17,7 +17,7 @@ p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	font-weight:normal;
 }
 body {
-	background:#222;
+	background:#111;
 	padding:10px;
 }
 header h1,
@@ -63,7 +63,14 @@ header h1 b {
 }
 .articles div p {
 	font-size:16px;
-	margin-bottom:20px;
+	margin:10px 0;
+}
+.articles div p.title {
+	margin-top:30px;
+}
+.articles img {
+	border:#999 2px solid;
+	border-radius:2px;
 }
 a.github,
 a.linkedin,
