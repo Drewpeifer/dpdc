@@ -4,9 +4,6 @@ body {
 	padding:5px;
 	overflow:visible;
 }
-#wrapper > div {
-	cursor:pointer;
-}
 #wrapper {
 	width:auto;
 }
@@ -97,4 +94,9 @@ a.xbox {
 	background:transparent url(../img/xbox_logo.png) 0 0 no-repeat;
 	background-size:contain; /* not so sure about this */
 	width:40px;
+}
+
+/* about */
+#about span i {
+	color:#999;
 }
