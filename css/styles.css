@@ -1,11 +1,15 @@
 body {
 	height:100%;
-	width:60%;
-	padding:5px;
+	width:100%;
+	padding:10px;
 	overflow:visible;
 }
 #wrapper {
-	width:auto;
+	width:60%;
+	border:#fff 1px dashed;
+}
+#wrapper, #canvas {
+display:inline-block;
 }
 /* colors */
 p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
@@ -15,7 +19,6 @@ p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 }
 body {
 	background:#111;
-	padding:10px;
 }
 header h1,
 header h1 b {
@@ -99,4 +102,14 @@ a.xbox {
 /* about */
 .about span i {
 	color:#999;
+}
+
+/* canvas */
+.canvas {
+    width:30%;
+    position:relative;
+    top:0;
+    left:-5%;
+    float:right;
+    border:#fff 1px solid;
 }
