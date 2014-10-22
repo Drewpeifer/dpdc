@@ -14,25 +14,17 @@ if (canvas.getContext) {
               };
     })();
 
-    var x = 100;
+    // initial variables here
 
     (function animloop(){
 
         var render = function() {
 
-            context.moveTo(x, 0);
-            context.lineTo(x, x);
-            context.strokeStyle = '#fff';
-            context.lineWidth = 10;
-            context.stroke();
+            //draw here
 
         }
 
-        if (x <= 400) {
-            x += 20;
-        } else {
-            // do nothing
-        }
+        // mod loop here
 
         requestAnimFrame(animloop);
         render();
