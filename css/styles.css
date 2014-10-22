@@ -18,14 +18,14 @@ p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	font-weight:normal;
 }
 body {
-	background:#111;
+	background:#0a2400;
 }
 header h1,
 header h1 b {
 	font-weight:bold;
 }
 header h1 {
-	color:#999;
+	color:#576950;
 	padding-bottom:20px;
 	font-size:42px;
 }
@@ -39,18 +39,22 @@ header h1 b {
 }
 #nav li {
 	display:inline-block;
-	width:10%;
+	width:25%;
 	text-align:left;
-	min-width:100px; /* only matters for mobile */
+	border:#576950 1px solid;
+	border-top:none;
+	border-right:none;
+	padding:5px;
 }
 #nav li h2 {
-	font-size:24px;
+	font-size:1.1em;
 	font-weight:bold;
 	letter-spacing:1px;
 }
 #nav li:hover,
 #nav li.active {
 	text-decoration:underline;
+	background:#576950;
 }
 
 /* articles */
@@ -107,9 +111,14 @@ a.xbox {
 /* canvas */
 .canvas {
     width:30%;
+    height:90%;
     position:relative;
     top:0;
     left:-5%;
     float:right;
     border:#fff 1px solid;
+}
+canvas {
+	height:90%;
+	width:100%;
 }
