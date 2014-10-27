@@ -11,7 +11,7 @@ $(function() {
 	           }, 5000);
 	
         lamp.animate({
-                top:-.6 * bodyH,
+                top:-.3 * bodyH,
                 boxShadow: "0 0 300px 300px #d99058"
             }, 5000);
 	
