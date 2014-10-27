@@ -1,5 +1,5 @@
 var uA = navigator.userAgent,
-    body = $('div.body'),
+    body = $('body'),
     card = $('#card'),
     mobileWarning = '<p class="mobile">Turn your device sideways for the best experience</p>';
 
