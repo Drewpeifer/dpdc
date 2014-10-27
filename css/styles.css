@@ -19,7 +19,7 @@ body {
 /* colors */
 p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	color:#f2f2f2;
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: 'Dosis', sans-serif;
 	font-weight:normal;
 }
 body {
@@ -85,6 +85,7 @@ header h1 em {
 .articles div p {
 	font-size:16px;
 	margin:10px 0;
+	line-height:1.2em;
 }
 .articles div p.title {
 	margin-top:30px;
@@ -105,6 +106,7 @@ header h1 em {
 .articles span {
     display:inline;
 }
+a.mail,
 a.github,
 a.linkedin,
 a.xbox {
@@ -119,17 +121,22 @@ a.xbox {
 .contact a {
 	height:34px;
 	width:80px;
-	margin-right:20px;
+	margin-left:10px;
 }
 a.github {
     margin-left:10px;
 }
-.contact a.linkedin {
+a.mail {
+	background:transparent url(../img/mail.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	width:45px;
+}
+a.linkedin {
 	background:transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
 	background-size:contain; /* not so sure about this */
-	width:40px;
+	width:35px;
 }
-.contact a.xbox {
+a.xbox {
 	background:transparent url(../img/xbox_logo.png) 0 0 no-repeat;
 	background-size:contain; /* not so sure about this */
 	width:40px;
