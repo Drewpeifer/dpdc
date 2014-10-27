@@ -142,8 +142,8 @@ a.github {
 
 /* lamp */
 .lamp {
-	height:100px;
-	width:100px;
+	height:5px;
+	width:5px;
 	background:#d99058;
 	border-radius:50%;
 	-moz-box-shadow:    0 0 100px 100px #111;
