@@ -1,5 +1,21 @@
 $(function() {
 	$('.articles div').hide();
+	
+	var bodyW = $('body').width(),
+	    bodyH = $('body').height(),
+	    lamp = $('.lamp'),
+	    wrapper = $('#wrapper');
+	
+	    wrapper.animate({
+	              top:0
+	           }, 5000);
+	
+        lamp.animate({
+                top:-.6 * bodyH,
+                boxShadow: "0 0 600px 400px #d99058"
+            }, 5000);
+	
+	                    
 });
 
 // subsection / drawer functionality

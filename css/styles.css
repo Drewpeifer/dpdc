@@ -9,7 +9,9 @@ body {
 }
 #wrapper {
 	width:60%;
-	border:#fff 1px dashed;
+	position:relative;
+	top:-300px;
+	/* border:#fff 1px dashed; */
 }
 #wrapper, #canvas {
 	display:inline-block;
@@ -21,28 +23,25 @@ p,i,b,a,h1,h2,h3,h4,h5,ul li,ol li,caption,code {
 	font-weight:normal;
 }
 body {
-	background:#222;
+	background:#111;
 	background-attachment:fixed;
 }
-.gradient {
+.gradientX {
   background-image:
     radial-gradient(
       circle at top left,
-      #111,
+      #000,
       #555
     );
 }
-header h1,
-header h1 b {
-	font-weight:bold;
-}
 header h1 {
-	color:#999;
+	color:#f2f2f2;
 	padding-bottom:20px;
 	font-size:42px;
 }
-header h1 b {
-	color:#f2f2f2;
+header h1 em {
+	color:#d99058;
+    font-style:normal;
 }
 
 /* nav */
@@ -56,7 +55,8 @@ header h1 b {
 	border:#f2f2f2 1px solid;
 	border-top:none;
 	border-right:none;
-	padding:5px;
+	padding:5px 10px;
+    float:left;
 }
 #nav li h2 {
 	font-size:1.1em;
@@ -75,7 +75,8 @@ header h1 b {
 /* articles */
 .articles {
 	display:inline-block;
-	width:100%;
+	width:70%;
+
 }
 .articles div {
 	padding-top:20px;
@@ -87,9 +88,21 @@ header h1 b {
 .articles div p.title {
 	margin-top:30px;
 }
+.articles div p a {
+	color:#d99058;
+    text-decoration:none;
+}
+.articles div p.title a {
+	text-decoration:underline;
+}
 .articles img {
-	border:#999 2px solid;
-	border-radius:2px;
+	border-radius:15px;
+	-webkit-box-shadow: 0 8px 6px -6px #f2f2f2;
+	   -moz-box-shadow: 0 8px 6px -6px #f2f2f2;
+	        box-shadow: 0 8px 6px -6px #f2f2f2;
+}
+.articles span {
+    display:inline;
 }
 a.github,
 a.linkedin,
@@ -107,6 +120,9 @@ a.xbox {
 	width:80px;
 	margin-right:20px;
 }
+a.github {
+    margin-left:10px;
+}
 .contact a.linkedin {
 	background:transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
 	background-size:contain; /* not so sure about this */
@@ -117,19 +133,22 @@ a.xbox {
 	background-size:contain; /* not so sure about this */
 	width:40px;
 }
-
 /* about */
 .about span i {
-	color:#999;
+	color:#d99058;
+	font-size:.9em;
 }
 
-/* canvas */
-.canvas {
-    width:30%;
-    height:90%;
-    position:relative;
-    top:0;
-    left:-5%;
-    float:right;
-    border:#fff 1px solid;
+/* lamp */
+.lamp {
+	height:1px;
+	width:1px;
+	margin:20px;
+	border-radius:50%;
+	-moz-box-shadow:    0 0 800px 400px #111;
+	-webkit-box-shadow: 0 0 800px 400px #111;
+	box-shadow:         0 0 800px 400px #111;
+	position:absolute;
+	top:100%;
+	left:100%;
 }
