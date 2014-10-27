@@ -55,7 +55,7 @@ header h1 em {
 	border:#f2f2f2 1px solid;
 	border-top:none;
 	border-right:none;
-	padding:5px 10px;
+	padding:5px 5px 2px 5px;
     float:left;
 }
 #nav li h2 {
@@ -79,6 +79,7 @@ header h1 em {
 
 }
 .articles div {
+	display:none;
 	padding-top:20px;
 }
 .articles div p {
@@ -141,14 +142,22 @@ a.github {
 
 /* lamp */
 .lamp {
-	height:1px;
-	width:1px;
-	margin:20px;
+	height:100px;
+	width:100px;
+	background:#d99058;
 	border-radius:50%;
-	-moz-box-shadow:    0 0 800px 400px #111;
-	-webkit-box-shadow: 0 0 800px 400px #111;
-	box-shadow:         0 0 800px 400px #111;
+	-moz-box-shadow:    0 0 100px 100px #111;
+	-webkit-box-shadow: 0 0 100px 100px #111;
+	box-shadow:         0 0 100px 100px #111;
 	position:absolute;
 	top:100%;
 	left:100%;
+}
+
+/* mobile styles */
+.mobile #wrapper {
+	width:70%;	
+}
+.mobile .articles {
+	width:100%;
 }

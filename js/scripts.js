@@ -12,7 +12,7 @@ $(function() {
 	
         lamp.animate({
                 top:-.6 * bodyH,
-                boxShadow: "0 0 600px 400px #d99058"
+                boxShadow: "0 0 300px 300px #d99058"
             }, 5000);
 	
 	                    
