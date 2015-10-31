@@ -1,0 +1,74 @@
+@font-face {
+    font-family:EuroCaps;
+    src:url(../fonts/eurocaps.TTF);
+}
+
+body {
+	font-family: 'Sintony', sans-serif;
+	font-family:EuroCaps;
+	background:#111;
+	color:#ff7100;
+	margin:20px 10%
+}
+h1 {
+	font-size:36px;
+	padding:10px 0 0 0;
+}
+h2 {
+	color:#FF8D33;
+	font-size:26px;
+	padding:10px 0 5px 0;
+	margin:0 0 10px 0;
+	border-bottom:#FF8D33 1px solid;
+}
+p {
+	font-size:18px;
+	color:#FFE3CC;
+	margin:10px 0;
+}
+b {
+	color:#ff7100;
+}
+a {
+	color:#FF8D33;
+}
+
+.wrapper {
+}
+.tip {
+	background:#444;
+	color:#f2f2f2;
+	border:#FF8D33 1px solid;
+	border-radius:3px;
+	display:inline;
+	margin:10px;
+	padding:5px 10px;
+}
+.tip.left {
+	float:left;
+	margin-left:0px;
+}
+.tip.right {
+	float:right;
+	margin-right:0px;
+}
+span {
+	width:100%;
+	text-align:center;
+}
+img {
+	display:block;
+	width:200px;
+	margin:10px auto;
+	border-radius:5px;
+}
+img.left {
+	float:left;
+	margin:10px;
+	margin-left:0;
+}
+img.right {
+	float:right;
+	margin:10px;
+	margin-right:0;
+}
