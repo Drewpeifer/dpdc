@@ -1,0 +1,35 @@
+/* layout and colors */
+body {
+	height:100%;
+	width:100%;
+	background:#f2f2f2;
+	color:#222;
+}
+.container {
+	height:100%;
+	width:100%;
+}
+.banner,
+.menu {
+	background:#222;
+	color:#f2f2f2;
+}
+.menu {
+	height:100%;
+	overflow-y:visible;
+}
+.black {
+	background:#222;
+}
+
+/* typography */
+h1 {
+	margin:20px 0 20px 0;
+}
+ul {
+	margin:0 20px;
+}
+li {
+	list-style:none;
+	text-align:center;
+}
