@@ -1,4 +1,7 @@
 /* layout and colors */
+html {
+	height:100%;
+}
 body {
 	height:100%;
 	width:100%;
@@ -8,20 +11,38 @@ body {
 .container {
 	height:100%;
 	width:100%;
-}
+	max-width:none;
+	margin:0;
+	padding:0;
+ }
+/* banner and menu */
 .banner,
 .menu {
 	background:#222;
 	color:#f2f2f2;
 }
+.banner {
+	width:100%;
+}
 .menu {
 	height:100%;
-	overflow-y:visible;
+}
+/* content */
+.row.content {
+	height:100%;
+	/* flex-box */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.row.content div {
+	align-items:stretch;
 }
 .black {
 	background:#222;
 }
-
 /* typography */
 h1 {
 	margin:20px 0 20px 0;
@@ -32,4 +53,10 @@ ul {
 li {
 	list-style:none;
 	text-align:center;
+}
+/* mobile */
+@media all and (max-width:640px) {
+	.banner h1 {
+		text-align:center;
+	}
 }
