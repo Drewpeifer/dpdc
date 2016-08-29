@@ -8,6 +8,10 @@ body {
 	background:#f2f2f2;
 	color:#222;
 }
+div {
+	padding:0;
+	margin:0;
+}
 .container {
 	height:100%;
 	width:100%;
@@ -23,12 +27,31 @@ body {
 }
 .banner {
 	width:100%;
+	height:10%;
+}
+.banner h1 {
+	padding:10px 0 0 10px;
 }
 .menu {
 	height:100%;
+	width:10%;
+}
+.menu ul {
+	margin:0;
+	padding:0;
+}
+.menu li {
+	margin:0;
+	padding:10px 0 10px 0;
+	cursor:pointer;
+}
+.menu li:hover,
+.menu li.active {
+	background:#f2f2f2;
+	color:#222;
 }
 /* content */
-.row.content {
+.content {
 	height:100%;
 	/* flex-box */
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -37,15 +60,57 @@ body {
 	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
-.row.content div {
+.content div {
 	align-items:stretch;
 }
-.black {
-	background:#222;
+.drawer {
+	margin:15px 0 0 10px;
+	width:90%;
+}
+.drawer div {
+	display:none;
+}
+a.mail,
+a.github,
+a.linkedin,
+a.xbox {
+	height:16px;
+	width:40px;
+	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	display:inline-block;
+	border-radius:3px;
+	text-decoration:none;
+}
+.contact a {
+	height:34px;
+	width:80px;
+	margin-left:20px;
+}
+a.github {
+    margin-left:10px;
+}
+a.mail {
+	background:transparent url(../img/envelope-dark.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	width:34px;
+}
+a.linkedin {
+	background:transparent url(../img/linkedin_logo-dark.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	width:35px;
+}
+a.resume {
+	background:transparent url(../img/resume.png) 0 0 no-repeat;
+	background-size:contain; /* not so sure about this */
+	width:35px;
 }
 /* typography */
+body {
+	font-family: 'Titillium Web', sans-serif;
+}
 h1 {
-	margin:20px 0 20px 0;
+	font-size:42px;
 }
 ul {
 	margin:0 20px;
@@ -53,9 +118,21 @@ ul {
 li {
 	list-style:none;
 	text-align:center;
+	font-size:24px;
+}
+p {
+	margin:10px 0;
 }
 /* mobile */
 @media all and (max-width:640px) {
+	.menu {
+		width:30%;
+		position:relative;
+		top:-1px;/* fix for odd webkit phantom pixel*/
+	}
+	.drawer {
+		width:70%;
+	}
 	.banner h1 {
 		text-align:center;
 	}
