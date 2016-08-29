@@ -19,12 +19,55 @@ div {
 	margin:0;
 	padding:0;
  }
-/* banner and menu */
+.content {
+background: -moz-linear-gradient(141deg, rgba(97,97,97,1) 0%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 86%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(14%, rgba(255,255,255,1)), color-stop(56%, rgba(255,255,255,1)), color-stop(100%, rgba(97,97,97,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(141deg, rgba(97,97,97,1) 0%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 86%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(141deg, rgba(97,97,97,1) 0%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 86%); /* opera 11.10+ */
+background: -ms-linear-gradient(141deg, rgba(97,97,97,1) 0%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 86%); /* ie10+ */
+background: linear-gradient(309deg, rgba(97,97,97,1) 0%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 86%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#616161',GradientType=1 ); /* ie6-9 */
+}
 .banner,
 .menu {
-	background:#222;
+	background:#444;
 	color:#f2f2f2;
 }
+p, h2 {
+	color:#444;
+}
+/* typography */
+body {
+	font-family: 'Titillium Web', sans-serif;
+}
+h1 {
+	font-size:42px;
+}
+h2 {
+	text-align:left;
+	letter-spacing:12px;
+	font-size:32px;
+	font-weight:bold;
+}
+ul {
+	margin:0 20px;
+}
+li {
+	list-style:none;
+	text-align:center;
+	font-size:24px;
+}
+p {
+	margin:10px 0;
+	line-height:1.2em;
+}
+hr {
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+
+/* banner and menu */
 .banner {
 	width:100%;
 	height:10%;
@@ -50,7 +93,8 @@ div {
 	background:#f2f2f2;
 	color:#222;
 }
-/* content */
+
+/* content and drawer */
 .content {
 	height:100%;
 	/* flex-box */
@@ -64,12 +108,14 @@ div {
 	align-items:stretch;
 }
 .drawer {
-	margin:15px 0 0 10px;
+	margin:15px 10px 0 10px;
 	width:90%;
 }
 .drawer div {
 	display:none;
 }
+
+/* section-specific */
 .contact a {
 	height:34px;
 	margin-left:10px;
@@ -97,36 +143,7 @@ div {
 	background-size:contain; /* not so sure about this */
 	width:35px;
 }
-/* typography */
-body {
-	font-family: 'Titillium Web', sans-serif;
-}
-h1 {
-	font-size:42px;
-}
-h2 {
-	text-align:center;
-	letter-spacing:12px;
-	font-size:32px;
-	font-weight:bold;
-}
-ul {
-	margin:0 20px;
-}
-li {
-	list-style:none;
-	text-align:center;
-	font-size:24px;
-}
-p {
-	margin:10px 0;
-	line-height:1.2em;
-}
-hr.fade-in-out {
-    border: 0;
-    height: 3px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
+
 /* mobile */
 @media all and (max-width:640px) {
 	.menu {
@@ -134,8 +151,20 @@ hr.fade-in-out {
 		position:relative;
 		top:-1px;/* fix for odd webkit phantom pixel*/
 	}
+	.menu ul {
+		position:relative;
+		top:1px;/* fix for odd webkit phantom pixel*/
+	}
 	.drawer {
 		width:70%;
+	}
+	.drawer h2 {
+		text-align:center;
+	}
+	hr {
+		border: 0;
+		height: 3px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 	}
 	.banner h1 {
 		text-align:center;
