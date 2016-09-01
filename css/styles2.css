@@ -171,3 +171,36 @@ hr {
 		margin-left:30%;
 	}
 }
+/* animation */
+.shape {
+	margin:5px 0 0 16px;
+	height:60px;
+	width:60px;
+	position:absolute;
+}
+.ring {
+	height:100%;
+	width:100%;
+	border:#f2f2f2 2px solid;
+	position:absolute;
+	border-radius:50%;
+	opacity:.5;
+}
+.one {
+	transform: rotate3d(1,1,0,-720deg);
+}
+.two {
+	transform: rotate3d(1,1,0,-540deg);
+}
+.three {
+	transform: rotate3d(1,1,0,-360deg);
+}
+.four {
+	transform: rotate3d(1,1,0,-180deg);
+}
+.five {
+	transform: rotate3d(1,1,0,180deg);
+}
+.six {
+	transform: rotate3d(1,1,0,360deg);
+}

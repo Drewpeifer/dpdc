@@ -2,7 +2,6 @@
 $('.menu ul li').on('click', function() {
 	var activeTab = $(this).text();// clicked tab
 
-console.log(activeTab);
 	if ($(this).hasClass('active')) {
 	// when clicking an already-open tab
 
@@ -16,4 +15,15 @@ console.log(activeTab);
 		$(this).addClass('active'),// activate this tab
 		$('.drawer .' + activeTab).slideDown();// reveal article
 	};
+});
+
+$(document).ready(function(){
+	function spinRings() {
+		$('.ring').css({ transformOrigin: '50%, 50%' })
+				  .transition({
+					rotate3d: '1,1,0,1440deg',
+					duration: 25000
+				  });
+	}
+	spinRings();
 });
