@@ -17,13 +17,6 @@ $('.menu ul li').on('click', function() {
 	};
 });
 
-$(document).ready(function(){
-	function spinRings() {
-		$('.ring').css({ transformOrigin: '50%, 50%' })
-				  .transition({
-					rotate3d: '1,1,0,1440deg',
-					duration: 25000
-				  });
-	}
-	spinRings();
-});
+//$(document).ready(function(){
+//
+//});
