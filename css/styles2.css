@@ -75,6 +75,7 @@ hr {
 	width:70%;
 	display:inline-block;
 	vertical-align:top;
+	letter-spacing:2px;
 }
 .banner h1 b {
 	color:#000;
@@ -116,14 +117,30 @@ hr {
 	align-items:stretch;
 }
 .drawer {
-	margin:15px 10px 0 10px;
+	margin:10px 10px 5px 15px;
 	width:90%;
+	max-width:700px;
 }
 .drawer div {
 	display:none;
 }
 
-/* section-specific */
+/*** section-specific ***/
+/* demos */
+.demos p.title a {
+	color:#000;
+	font-weight:bold;
+	font-size:26px;
+}
+.demos p.title a.github {
+	height:24px;
+	width:45px;
+	background:transparent url(../img/github_logo.png) center no-repeat;
+	background-size:contain; /* not so sure about this */
+	display:block;
+	text-decoration:none;
+}
+/* contact */
 .contact a {
 	height:34px;
 	margin-left:10px;
