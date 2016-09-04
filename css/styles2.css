@@ -58,6 +58,10 @@ hr {
     background-image: linear-gradient(to right, rgba(68, 68, 68, 1), rgba(68, 68, 68, .75), rgba(0, 0, 0, 0.25), rgba(68, 68, 68, 0));
 }
 
+hr.divider {
+	height:1px;
+}
+
 /* banner and menu */
 .banner {
 	width:100%;
@@ -142,7 +146,8 @@ hr {
 	text-decoration:none;
 }
 .demos a img {
-	max-width:650px;
+	width:100%;
+	max-width:450px;
 }
 /* contact */
 .contact a {
