@@ -19,9 +19,6 @@ div {
 	margin:0;
 	padding:0;
  }
-.content {
-
-}
 .banner,
 .menu {
 	background:#444;
@@ -119,10 +116,13 @@ hr {
 .drawer {
 	margin:10px 10px 5px 15px;
 	width:90%;
-	max-width:700px;
+	overflow-y:scroll;
 }
 .drawer div {
 	display:none;
+}
+.drawer div p {
+	max-width:650px;
 }
 
 /*** section-specific ***/
