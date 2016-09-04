@@ -131,14 +131,18 @@ hr {
 	color:#000;
 	font-weight:bold;
 	font-size:26px;
+	text-decoration:none;
 }
-.demos p.title a.github {
+.demos a.github {
 	height:24px;
 	width:45px;
 	background:transparent url(../img/github_logo.png) center no-repeat;
 	background-size:contain; /* not so sure about this */
 	display:block;
 	text-decoration:none;
+}
+.demos a img {
+	max-width:650px;
 }
 /* contact */
 .contact a {
