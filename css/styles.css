@@ -40,13 +40,74 @@ h2 {
 	font-weight:normal;
 	margin:0 5px;
 }
+h3 {
+	font-size:1.3em;
+	margin:5px 5px 0 5px;
+	display:inline-block;
+}
 /* drawers */
 .drawer {
 	display:none;
 	background:rgba(0,0,0,.4);
 }
 .drawer p {
-	margin:10px 5px;
+	margin:5px 5px 10px 5px;
+}
+a.demo {
+	display:block;
+	width:100%;
+	text-align:center;
+}
+a.demo img {
+	width:70%;
+}
+a {
+	color:#4682b4;
+	text-decoration:none;
+}
+a:visited {
+	color:#888;
+}
+/* icons */
+a.github-sm {
+	display:inline-block;
+	height:20px;
+	width:44px;
+	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
+	background-size:contain;
+}
+.contact a {
+	display:inline-block;
+	height:34px;
+	margin:10px;
+}
+a.mail,
+a.github,
+a.linkedin,
+a.resume {
+	display:inline-block;
+	border-radius:3px;
+}
+a.github {
+	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
+	background-size:contain;
+    margin-left:10px;
+    width:74px;
+}
+a.mail {
+	background:transparent url(../img/mail.png) 0 0 no-repeat;
+	background-size:contain;
+	width:34px;
+}
+a.linkedin {
+	background:transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
+	background-size:contain;
+	width:35px;
+}	
+a.resume {
+	background:transparent url(../img/resume.png) 0 0 no-repeat;
+	background-size:contain;
+	width:35px;
 }
 /* mobile */
 @media all and (max-width:640px) {
