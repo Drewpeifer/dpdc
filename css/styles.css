@@ -115,7 +115,7 @@ a.resume {
 	html { 
 		background: url(../img/me_dogbelly.jpg) no-repeat top right fixed;
 		/* why do I have to declare this again? */
-		-webkit-background-size: fit;
+		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
