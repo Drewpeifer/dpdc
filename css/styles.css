@@ -60,6 +60,7 @@ a.demo {
 }
 a.demo img {
 	width:70%;
+	border:#fff 3px solid;
 }
 a {
 	color:#4682b4;
