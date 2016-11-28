@@ -1,135 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="drewpeifer.com">
-    <meta name="author" content="Drew Peifer">
-	<title>drewpeifer.com</title>
-    <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+	<meta charset="utf-8">
+	<title>Drew Peifer</title>
+	<meta name="description" content="Description">
+	<meta name="author" content="drewpeifer">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
 
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-    <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="favicon.ico">
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div id="wrapper">
-		<header>
-			<h1>drew<em>peifer</em></h1>
-		</header>
-		<ul id="nav">
-			<li id="about">
-				<h2>About</h2>
-			</li>
-			<li id="demos">
-				<h2>Demos</h2>
-			</li>
-			<li id="contact">
-				<h2>Contact</h2>
-			</li>
-		</ul>
-		<div class="articles">
+		<div class="banner">
+			<h1>DREW PEIFER!</h1>
+		</div>
+		<div class="content">
 			<div class="about">
-				<p>
-					I'm a web developer in central PA specializing in hand-coded
-					HTML, CSS, and JavaScript. I work primarily with client-side
-					optimization, making sure your site looks great in every browser
-					and runs well on every device.
-				</p>
-				<span>
-					<img src="img/mealz.jpeg" />
-					<br />
-					<i>Me and my baby girl, Amelia</i>
-				</span>
-				<p>
-					Whether you're building an Angular app or updating a ten year
-					old CRM system, I can get you where you need to be. There's
-					always a way to make things work, and I can help you find the cleanest,
-					most efficient way to do it.
-				</p>
+				<h2>Read about me!</h2>
+				<div class="drawer">
+					<p>
+						I'm a web developer in central PA specializing in hand-coded
+						HTML, CSS, and JavaScript. I work primarily with client-side
+						optimization, making sure your site looks great in every browser
+						and runs well on every device.
+					</p>
+					<p>
+						Whether you're building an Angular app or updating a ten year
+						old CRM system, I can get you where you need to be. There's
+						always a way to make things work, and I can help you find the 
+						cleanest, most efficient way to do it.
+					</p>
+				</div>
 			</div>
 			<div class="demos">
-				<p>
-					When I work on personal projects I like to be creative and have a bit of
-					fun. Listed below are a few live demos, each with something behind-the-scenes
-					that makes it a little interesting (at least to me) and unique.
-				</p>
-				<hr>
-				<p class="title">
-					<a target="_blank" href="http://www.drewpeifer.com/demo/space">Starfield</a>
-					<a target="_blank" class="github" href="http://github.com/Drewpeifer/demo/tree/master/space">&nbsp;</a>
-				</p>
-				<a target="_blank" href="http://www.drewpeifer.com/demo/space">
-				    <img src="img/screencap_space.png" />
-				</a>
-				<p>
-					An HTML/CSS/jQuery animation of stars passing by, built to act
-					as a lightweight background or sidebar animation. It's modular (easy to implement
-					elsewhere), responsive (works at any resolution), cross-browser, and
-					cross-device. Pretty serene, too.
-				</p>
-				<p class="title">
-					<a target="_blank" href="http://www.drewpeifer.com/demo/3d-card">3D Business Card</a>
-					<a target="_blank" class="github" href="http://github.com/Drewpeifer/demo/tree/master/3d-card">&nbsp;</a>
-				</p>
-				<a target="_blank" href="http://www.drewpeifer.com/demo/3d-card">
-				    <img src="img/screencap_card.png" />
-				</a>
-				<p>
-					Another HTML/CSS/jQuery proof-of-concept for a rotating virtual business card.
-					I used a combination of folding and rotating animations to create the card itself
-					as well as the flipping animations.
-					I owe a big thanks to the awesome JavaScript library
-					<a target="_blank" href="http://ricostacruz.com/jquery.transit/">transit.js</a>, which
-					made my code much more concise and legible, while keeping the animations
-					cross-browser compatible and mobile-friendly using a single method.
-				</p>
-				<p class="title">
-					<a target="_blank" href="http://www.drewpeifer.com/demo/pnc-engine">Prototype Point-and-click Engine</a>
-					<a target="_blank" class="github" href="http://github.com/Drewpeifer/demo/tree/master/pnc-engine">&nbsp;</a>
-				</p>
-				<a target="_blank" href="http://www.drewpeifer.com/demo/pnc-engine">
-				    <img src="img/screencap_pnc.png" />
-				</a>
-				<p>
-					I've always wanted to design a game, and the attraction of making
-					a browser-based game was obvious enough given the code I'm familiar with. This
-					project was a stab at making a template for browser-based
-					point-and-click adventures that would allow
-					anyone to make a game with little or no coding knowledge. Designers would ideally
-					create a set of basic JSON and plain text files (possibly Markdown)
-					that describe each scene, characters, items, etc. and then upload custom graphics
-					in the form of PNG's and sprites. The game engine would then parse those files
-					and create HTML on the fly as the player progressed through the scenes and
-					interacted with the environment. The link above takes you to the debugging
-					sandbox, but as work continues I will eventually open source the entire engine
-					as its own framework.
-				</p>
-				<p class="title">
-					<a target="_blank" href="http://www.drewpeifer.com/demo/halloween-shapes">
-						Halloween HTML/CSS Shapes
+				<h2>Play my game!</h2>
+				<div class="drawer">
+					<a target="_blank" href="http://www.drewpeifer.com/demo/spacetrade">
+						<h3>SpaceTrade (Live Demo)</h3>
 					</a>
-					<a target="_blank" class="github" href="http://github.com/Drewpeifer/demo/tree/master/halloween-shapes">&nbsp;</a>
-				</p>
-				<a target="_blank" href="http://www.drewpeifer.com/demo/halloween-shapes">
-				    <img src="img/screencap_bat.png" />
-				</a>
-				<p>
-					Inspired by the guys over at
-					 <a target="_blank" href="http://css-tricks.com/examples/ShapesOfCSS/">
-					 	CSS-Tricks
-					 </a>, I made some HTML/CSS-only shapes for the Fall season.
-					 Just like everything useful, they're responsive
-					 and cross-browser/cross-device (mostly, there are browser-specific
-					 breakpoints). Anyway, just a little bit
-					 of seasonal fun. I like to think of web design as a strange form of art,
-					 and I guess these are the equivalent of my late night doodles.
-				</p>
+					<a target="_blank" class="github-sm" href="http://github.com/Drewpeifer/demo/tree/master/spacetrade">&nbsp;</a>
+					<p>
+					A small JavaScript game similar to <i>Dope Wars</i> and other
+					resource management games, but also includes a randomized encounter
+					system, a Choose-Your-Own-Adventure mechanic, and some
+					experimental UI elements. It also features a pure CSS/JS
+					starfield background that's lightweight and modular.
+					</p>
+					<a class="demo" target="_blank" href="http://www.drewpeifer.com/demo/spacetrade">
+					    <img src="img/screencap_spacetrade.png" />
+					</a>
+					<p>
+					<p>
+					It was a refreshing change to develop this, and I learned
+					(and re-learned) a lot about object/variable manipulation
+					in the process, as well as organizational best practices.
+					I update this from time to time but it will most likely
+					live as a perpetual coding sandbox / work in progress.
+					I keep some of the newest additions on an experimental branch
+					<a target="_blank" href="http://www.drewpeifer.com/experimental/spacetrade">
+						hidden over here
+					</a>
+					because some features haven't been cross-browser tested or
+					optimized for mobile use, but feel free to play around with it.
+					</p>
+				</div>
 			</div>
 			<div class="contact">
-				<p>
-				    <a  target="_blank"
+				<h2>Contact me!</h2>
+				<div class="drawer">
+					<a  target="_blank"
 				    	title="Github"
 						class="github"
 						href="https://github.com/Drewpeifer">
@@ -148,16 +92,16 @@
 						class="resume"
 						href="img/Drew_Peifer_Resume_2015.pdf">
 					</a>
-				</p>
- 			</div>
- 		</div>
- 	</div>
- 	<div class="lamp"></div>
+					<br />
+					<a class="se" href="http://stackexchange.com/users/2663706">
+						<img src="http://stackexchange.com/users/flair/2663706.png?theme=dark" width="208" height="58" alt="profile for Dpeif on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Dpeif on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- scripts -->
-    <script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
-    <script src="js/browser.js" type="text/javascript"></script>
-    <script src="js/transit.js" type="text/javascript"></script>
-    <script src="js/shadow.js" type="text/javascript"></script>
-    <script src="js/scripts.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,40 +1,17 @@
-$(function() {
-	$('.articles div').hide();
-	
-	var bodyW = $('body').width(),
-	    bodyH = $('body').height(),
-	    lamp = $('.lamp'),
-	    wrapper = $('#wrapper');
-	
-	    wrapper.animate({
-	              top:0
-	           }, 5000);
-	
-        lamp.animate({
-                top:-.3 * bodyH,
-                boxShadow: "0 0 300px 300px #d99058"
-            }, 5000);
-	
-	                    
-});
+// content hide / show
+$('.content div h2').click(function() {
+	header = $(this);
+	drawer = header.siblings('.drawer');
 
-// subsection / drawer functionality
-
-$('ul li').click(function() {
-	var activeTab = $(this).attr('id'); // clicked tab
-
-	if ($(this).hasClass('active')) {
-	// when clicking an already-open tab
-
-		$(this).removeClass('active'), // deactivate tab
-		$('.articles .' + activeTab).slideUp(); // close article
-
+	if (header.hasClass('active')) {
+		// close current section
+		$('h2.active').removeClass('active');
+		$('.drawer.active').removeClass('active').slideUp(100);
 	} else {
+		$('h2.active').removeClass('active');
+		$('.drawer.active').removeClass('active').slideUp(100);
 
-		$('.articles div').slideUp(), // hide any active articles
-		$('ul li').removeClass('active'), // deactivate any active tabs
-		$(this).addClass('active'), // activate this tab
-		$('.articles .' + activeTab).slideDown(); // reveal article
-
+		header.addClass('active');
+		drawer.addClass('active').slideDown(400);
 	}
 });
