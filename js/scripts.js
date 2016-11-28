@@ -1,18 +1,17 @@
-// navigation
-$('.menu ul li').on('click', function() {
-	var activeTab = $(this).text();// clicked tab
+// content hide / show
+$('.content div h2').click(function() {
+	header = $(this);
+	drawer = header.siblings('.drawer');
 
-	if ($(this).hasClass('active')) {
-	// when clicking an already-open tab
-
-		//$(this).removeClass('active'),// deactivate tab
-		//$('.drawer .' + activeTab).slideUp();// close article
-
+	if (header.hasClass('active')) {
+		// close current section
+		$('h2.active').removeClass('active');
+		$('.drawer.active').removeClass('active').slideUp(100);
 	} else {
+		$('h2.active').removeClass('active');
+		$('.drawer.active').removeClass('active').slideUp(100);
 
-		$('.drawer div').slideUp(),// hide any active articles
-		$('ul li').removeClass('active'),// deactivate any active tabs
-		$(this).addClass('active'),// activate this tab
-		$('.drawer .' + activeTab).slideDown();// reveal article
-	};
+		header.addClass('active');
+		drawer.addClass('active').slideDown(400);
+	}
 });
