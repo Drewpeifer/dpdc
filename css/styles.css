@@ -16,10 +16,12 @@ div {
 }
 .banner {
 	height:30%;
+	color:#000;
 }
 /* typography, backgrounds, and colors */
 html { 
-	background: url(../img/me_dogbelly.jpg) no-repeat center center fixed; 
+	background-color:#132D42;
+	/* background: url(../img/me_and_mealz.jpg) no-repeat center center fixed; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -29,16 +31,19 @@ body {
 	color:#f2f2f2;
 }
 .content {
-	background:rgba(0,0,0,.4);
+	background:rgba(0,0,0,.6);
+	padding:5px 0;
 }
 h1 {
 	text-align:center;
 	font-size:4em;
 	margin:0 auto;
+	opacity:.6;
 }
 h2 {
 	font-weight:normal;
 	margin:0 5px;
+	cursor:pointer;
 }
 h3 {
 	font-size:1.3em;
@@ -63,11 +68,11 @@ a.demo img {
 	border:#fff 3px solid;
 }
 a {
-	color:#4682b4;
+	color:#567E9F;
 	text-decoration:none;
 }
 a:visited {
-	color:#888;
+	color:#777;
 }
 /* icons */
 a.github-sm {
@@ -113,7 +118,7 @@ a.resume {
 /* mobile */
 @media all and (max-width:640px) {
 	html { 
-		background: url(../img/me_dogbelly.jpg) no-repeat top right fixed;
+		background: url(../img/me_and_mealz.jpg) no-repeat top right fixed;
 		/* why do I have to declare this again? */
 		-webkit-background-size: fit;
 		-moz-background-size: cover;
