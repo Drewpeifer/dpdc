@@ -121,16 +121,6 @@ a.resume {
 }
 /* mobile */
 @media all and (max-width:640px) {
-	html { 
-		background: url(../img/me_and_mealz.jpg) no-repeat top right fixed;
-		/* why do I have to declare this again? */
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		height:100%;
-		width:100%;
-	}
 	#wrapper {
 		width:90%;
 	}
