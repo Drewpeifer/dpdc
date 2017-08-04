@@ -16,7 +16,7 @@ div {
 }
 .banner {
 	height:30%;
-	color:#000;
+	color:#f2f2f2;
 }
 /* typography, backgrounds, and colors */
 html { 
@@ -121,6 +121,7 @@ a.resume {
 }
 /* mobile */
 @media all and (max-width:640px) {
+<<<<<<< HEAD
 	html { 
 		background: url(../img/me_and_mealz.jpg) no-repeat top right fixed;
 		/* why do I have to declare this again? */
@@ -129,6 +130,8 @@ a.resume {
 		-o-background-size: cover;
 		background-size: cover;
 	}
+=======
+>>>>>>> master
 	#wrapper {
 		width:90%;
 	}
