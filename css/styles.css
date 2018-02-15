@@ -30,10 +30,6 @@ html {
 body {
 	color:#f2f2f2;
 }
-.content {
-	background:rgba(0,0,0,.6);
-	padding:5px 0;
-}
 h1 {
 	text-align:center;
 	font-size:4em;
@@ -55,11 +51,11 @@ h3 {
 	display:inline-block;
 }
 /* drawers */
-.drawer {
+.drawers div {
 	display:none;
 	background:rgba(0,0,0,.4);
 }
-.drawer p {
+.drawers div p {
 	margin:5px 5px 10px 5px;
 }
 a.demo {
@@ -121,7 +117,6 @@ a.resume {
 }
 /* mobile */
 @media all and (max-width:640px) {
-<<<<<<< HEAD
 	html { 
 		background: url(../img/me_and_mealz.jpg) no-repeat top right fixed;
 		/* why do I have to declare this again? */
@@ -130,8 +125,6 @@ a.resume {
 		-o-background-size: cover;
 		background-size: cover;
 	}
-=======
->>>>>>> master
 	#wrapper {
 		width:90%;
 	}
