@@ -47,8 +47,28 @@ h1 {
 }
 h2 {
 	font-weight:normal;
-	margin:0 5px;
+	margin:0 auto;
+	text-align:center;
 	cursor:pointer;
+	transition: all .5s ease-in-out;
+	width:fit-content;
+}
+h2:hover {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: pulse;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-name: pulse;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+@-webkit-keyframes pulse {
+	from { text-shadow: 0 0 0px white; }
+	to { text-shadow: 0 0 20px white; }
 }
 h3 {
 	font-size:1.3em;
@@ -72,6 +92,7 @@ hr {
 	display:none;
 	background:rgba(0,0,0,.4);
 	text-align:center;
+	padding:5px 0;
 }
 .drawers div p {
 	margin:5px 5px 10px 5px;
@@ -99,6 +120,9 @@ a.github-sm {
 	width:44px;
 	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
 	background-size:contain;
+	border-radius:5px;
+	position:relative;
+	top:1px;
 }
 .contact a {
 	display:inline-block;
