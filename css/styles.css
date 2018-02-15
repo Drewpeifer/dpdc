@@ -9,6 +9,9 @@ div {
 	padding:0;
 	width:100%;
 }
+::-webkit-scrollbar {
+display: none;
+}
 /* layout */
 #wrapper {
 	width:70%;
@@ -19,9 +22,8 @@ div {
 	color:#f2f2f2;
 }
 /* typography, backgrounds, and colors */
-html { 
+html, body {
 	background-color:#132D42;
-	/* background: url(../img/me_and_mealz.jpg) no-repeat center center fixed; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -50,10 +52,22 @@ h3 {
 	margin:5px 5px 0 5px;
 	display:inline-block;
 }
+/* headers */
+.headers {
+	text-align:center;
+}
+/* separator */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+    margin-bottom:0;
+}
 /* drawers */
 .drawers div {
 	display:none;
 	background:rgba(0,0,0,.4);
+	text-align:center;
 }
 .drawers div p {
 	margin:5px 5px 10px 5px;
@@ -72,7 +86,7 @@ a {
 	text-decoration:none;
 }
 a:visited {
-	color:#777;
+	color:#999;
 }
 /* icons */
 a.github-sm {
@@ -118,7 +132,6 @@ a.resume {
 /* mobile */
 @media all and (max-width:640px) {
 	html { 
-		background: url(../img/me_and_mealz.jpg) no-repeat top right fixed;
 		/* why do I have to declare this again? */
 		-webkit-background-size: fit;
 		-moz-background-size: cover;
