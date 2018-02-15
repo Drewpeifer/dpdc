@@ -9,6 +9,9 @@ div {
 	padding:0;
 	width:100%;
 }
+::-webkit-scrollbar {
+display: none;
+}
 /* layout */
 #wrapper {
 	width:70%;
@@ -16,12 +19,14 @@ div {
 }
 .banner {
 	height:30%;
-	color:#f2f2f2;
+	color: #f2f2f2;
+	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
 }
 /* typography, backgrounds, and colors */
-html { 
+html, body {
 	background-color:#132D42;
-	/* background: url(../img/me_and_mealz.jpg) no-repeat center center fixed; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -29,10 +34,6 @@ html {
 }
 body {
 	color:#f2f2f2;
-}
-.content {
-	background:rgba(0,0,0,.6);
-	padding:5px 0;
 }
 h1 {
 	text-align:center;
@@ -46,20 +47,54 @@ h1 {
 }
 h2 {
 	font-weight:normal;
-	margin:0 5px;
+	margin:0 auto;
+	text-align:center;
 	cursor:pointer;
+	transition: all .5s ease-in-out;
+	width:fit-content;
+}
+h2:hover {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: pulse;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-name: pulse;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+@-webkit-keyframes pulse {
+	from { text-shadow: 0 0 0px white; }
+	to { text-shadow: 0 0 20px white; }
 }
 h3 {
 	font-size:1.3em;
 	margin:5px 5px 0 5px;
 	display:inline-block;
 }
+/* headers */
+.headers {
+	text-align:center;
+	text-transform:uppercase;
+}
+/* separator */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+    margin-bottom:0;
+}
 /* drawers */
-.drawer {
+.drawers div {
 	display:none;
 	background:rgba(0,0,0,.4);
+	text-align:center;
+	padding:5px 0;
 }
-.drawer p {
+.drawers div p {
 	margin:5px 5px 10px 5px;
 }
 a.demo {
@@ -76,7 +111,7 @@ a {
 	text-decoration:none;
 }
 a:visited {
-	color:#777;
+	color:#999;
 }
 /* icons */
 a.github-sm {
@@ -85,6 +120,9 @@ a.github-sm {
 	width:44px;
 	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
 	background-size:contain;
+	border-radius:5px;
+	position:relative;
+	top:1px;
 }
 .contact a {
 	display:inline-block;
@@ -121,17 +159,13 @@ a.resume {
 }
 /* mobile */
 @media all and (max-width:640px) {
-<<<<<<< HEAD
 	html { 
-		background: url(../img/me_and_mealz.jpg) no-repeat top right fixed;
 		/* why do I have to declare this again? */
 		-webkit-background-size: fit;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 	}
-=======
->>>>>>> master
 	#wrapper {
 		width:90%;
 	}
