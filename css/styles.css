@@ -19,7 +19,10 @@ display: none;
 }
 .banner {
 	height:30%;
-	color:#f2f2f2;
+	color: #f2f2f2;
+	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
 }
 /* typography, backgrounds, and colors */
 html, body {
@@ -55,6 +58,7 @@ h3 {
 /* headers */
 .headers {
 	text-align:center;
+	text-transform:uppercase;
 }
 /* separator */
 hr {
