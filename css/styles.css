@@ -1,58 +1,68 @@
 /* general */
 body {
-	margin:0;
-	padding:0;
-	font-family:'Titillium Web', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Titillium Web', sans-serif;
 }
+
 div {
-	margin:0;
-	padding:0;
-	width:100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
+
 ::-webkit-scrollbar {
-display: none;
+	display: none;
 }
+
 /* layout */
 #wrapper {
-	width:70%;
-	margin:0 auto;
+	width: 70%;
+	margin: 0 auto;
 }
+
 .banner {
-	height:30%;
+	height: 30%;
 	color: #f2f2f2;
 	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: white;
 }
+
 /* typography, backgrounds, and colors */
-html, body {
-	background-color:#132D42;
+html,
+body {
+	background-color: #132D42;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
+
 body {
-	color:#f2f2f2;
+	color: #f2f2f2;
 }
+
 h1 {
-	text-align:center;
-	font-size:4em;
-	margin:0 auto;
-	opacity:.6;
+	text-align: center;
+	font-size: 4em;
+	margin: 0 auto;
+	opacity: .6;
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
-	cursor:default;
+	cursor: default;
 }
+
 h2 {
-	font-weight:normal;
-	margin:0 auto;
-	text-align:center;
-	cursor:pointer;
+	font-weight: normal;
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
 	transition: all .5s ease-in-out;
-	width:fit-content;
+	width: fit-content;
 }
+
 h2:hover {
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
@@ -66,118 +76,152 @@ h2:hover {
 	animation-direction: alternate;
 	animation-iteration-count: infinite;
 }
+
 @-webkit-keyframes pulse {
-	from { text-shadow: 0 0 0px white; }
-	to { text-shadow: 0 0 20px white; }
+	from {
+		text-shadow: 0 0 0px white;
+	}
+
+	to {
+		text-shadow: 0 0 20px white;
+	}
+
 }
+
 h3 {
-	font-size:1.3em;
-	margin:5px 5px 0 5px;
-	display:inline-block;
+	font-size: 1.3em;
+	margin: 5px 5px 0 5px;
+	display: inline-block;
 }
+
 /* headers */
 .headers {
-	text-align:center;
-	text-transform:uppercase;
+	text-align: center;
+	text-transform: uppercase;
 }
+
 /* separator */
 hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
-    margin-bottom:0;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+	margin-bottom: 0;
 }
+
 /* drawers */
 .drawers div {
-	display:none;
-	background:rgba(0,0,0,.4);
-	text-align:center;
-	padding:5px 0;
+	display: none;
+	background: rgba(0, 0, 0, .4);
+	text-align: center;
+	padding: 5px 0;
 }
+
 .drawers div p {
-	margin:5px 5px 10px 5px;
+	margin: 5px 5px 10px 5px;
 }
+
 a.demo {
-	display:block;
-	width:100%;
-	text-align:center;
+	display: block;
+	width: 100%;
+	text-align: center;
 }
+
 a.demo img {
-	width:70%;
-	border:#888 1px solid;
+	width: 70%;
+	border: #888 1px solid;
 }
+
 a {
-	color:#567E9F;
-	text-decoration:none;
+	color: #567E9F;
+	text-decoration: none;
 }
+
 a:visited {
-	color:#999;
+	color: #999;
 }
+
 /* icons */
 a.github-sm {
-	display:inline-block;
-	height:20px;
-	width:44px;
-	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
-	background-size:contain;
-	border-radius:5px;
-	position:relative;
-	top:1px;
+	display: inline-block;
+	height: 20px;
+	width: 44px;
+	background: #fff url(../img/github_logo.png) 0 0 no-repeat;
+	background-size: contain;
+	border-radius: 5px;
+	position: relative;
+	top: 1px;
 }
+
 .contact a {
-	display:inline-block;
-	height:34px;
-	margin:10px;
+	display: inline-block;
+	height: 34px;
+	margin: 10px;
 }
+
 a.mail,
 a.github,
 a.linkedin,
 a.resume {
-	display:inline-block;
-	border-radius:3px;
+	display: inline-block;
+	border-radius: 3px;
 }
+
 a.github {
-	background:#fff url(../img/github_logo.png) 0 0 no-repeat;
-	background-size:contain;
-    margin-left:10px;
-    width:74px;
+	background: #fff url(../img/github_logo.png) 0 0 no-repeat;
+	background-size: contain;
+	margin-left: 10px;
+	width: 74px;
 }
+
 a.mail {
-	background:transparent url(../img/mail.png) 0 0 no-repeat;
-	background-size:contain;
-	width:34px;
+	background: transparent url(../img/mail.png) 0 0 no-repeat;
+	background-size: contain;
+	width: 34px;
 }
+
 a.linkedin {
-	background:transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
-	background-size:contain;
-	width:35px;
-}	
-a.resume {
-	background:transparent url(../img/resume.png) 0 0 no-repeat;
-	background-size:contain;
-	width:35px;
+	background: transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
+	background-size: contain;
+	width: 35px;
 }
+
+a.resume {
+	background: transparent url(../img/resume.png) 0 0 no-repeat;
+	background-size: contain;
+	width: 35px;
+}
+
+a.demo img.data-cap {
+	width: 30%;
+}
+
 /* mobile */
 @media all and (max-width:640px) {
-	html { 
+	html {
+
 		/* why do I have to declare this again? */
 		-webkit-background-size: fit;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 	}
+
 	#wrapper {
-		width:90%;
+		width: 90%;
 	}
+
 	h1 {
-		font-size:4em;
-		line-height:1em;
-		margin:10px 10px;
+		font-size: 4em;
+		line-height: 1em;
+		margin: 10px 10px;
 	}
+
 	h2 {
-		font-size:2em;
+		font-size: 2em;
 	}
+
 	p {
-		font-size:1em;
+		font-size: 1em;
 	}
+
 }
