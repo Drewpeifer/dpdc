@@ -23,7 +23,7 @@ div {
 
 .banner {
 	height: 30%;
-	color: #f2f2f2;
+	color: #C2B28F;
 	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: white;
@@ -32,7 +32,7 @@ div {
 /* typography, backgrounds, and colors */
 html,
 body {
-	background-color: #132D42;
+	background-color: #272324;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -40,7 +40,7 @@ body {
 }
 
 body {
-	color: #f2f2f2;
+	color: #E4D8B4;
 }
 
 h1 {
@@ -92,6 +92,7 @@ h3 {
 	font-size: 1.3em;
 	margin: 5px 5px 0 5px;
 	display: inline-block;
+	margin: 10px 0;
 }
 
 /* headers */
@@ -111,13 +112,17 @@ hr {
 /* drawers */
 .drawers div {
 	display: none;
-	background: rgba(0, 0, 0, .4);
+	background: rgba(0, 0, 0, .2);
 	text-align: center;
 	padding: 5px 0;
+	margin: 0 20px;
 }
 
 .drawers div p {
 	margin: 5px 5px 10px 5px;
+}
+.drawers div > p {
+	margin: 10px 15%;
 }
 
 a.demo {
@@ -132,12 +137,12 @@ a.demo img {
 }
 
 a {
-	color: #567E9F;
+	color: #83B799;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #999;
+	color: #E2CD6D;
 }
 
 /* icons */
