@@ -105,18 +105,21 @@
 				<br />
 				<hr />
 				<br />
-				<a target="_blank" href="https://github.com/Drewpeifer/medialytics">
-					<h3>Medialytics</h3>
+				<a target="_blank" href="http://www.drewpeifer.com/demo/vr-solar">
+					<h3>3D / VR Solar System</h3>
 				</a>
-				<a target="_blank" class="github-sm" href="https://github.com/Drewpeifer/medialytics">&nbsp;</a>
-				<a class="demo" target="_blank" href="https://github.com/Drewpeifer/medialytics">
-				    <img src="img/screencap_medialytics.png" />
+				<a target="_blank" class="github-sm" href="https://github.com/Drewpeifer/demo/tree/master/vr-solar">&nbsp;</a>
+				<a class="demo" target="_blank" href="http://www.drewpeifer.com/demo/vr-solar">
+				    <img src="img/screencap_vr-solar.png" />
 				</a>
 				<p>
-				<i>Medialytics</i> is a single-page app that shows you information about the content
-				on your <a href="http://www.plex.tv/" target="_blank">Plex</a> server by parsing the XML feed that it generates.
-				There are some nifty charts, library counts and durations, and the big button at the bottom lets you view your
-				content in an easy-to-browse mobile-friendly format.
+				This is a simple <a href="https://aframe.io/" target="_blank">A-Frame</a> implementation, which is a client-side JS-based 3D framework.
+				It's specifically designed to workeasily with VR integration, or just simple 3D web applications. It provides a lot of simple
+				constructors and behavior that is more commonly reserved for desktop software / engines (e.g. Unity), such as lightbox effects
+				or spacial geometry.
+				</p>
+				<p>
+				This demo creates a (scaled) representation of our solar system, <b>including Pluto</b>. I have comments in the code describing how and why I modified certain variables in order to create a realistic but also navigable scene. While it's definitely notable that the A-Frame code is so easily initialized (I had this up and running super fast), it's also worth noting that it's a very small amount of code that generates the entire scene (less than 200 lines of JS + JSON combined).
 				</p>
 				<br />
 				<hr />
