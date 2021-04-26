@@ -157,10 +157,19 @@ a.github-sm {
 	top: 1px;
 }
 
+.contact {
+	text-align: center;
+}
+.contact hr {
+	display: block;
+	background-image: none;
+	margin: 0;
+}
 .contact a {
 	display: inline-block;
 	height: 34px;
 	margin: 10px;
+	margin-bottom: 0;
 }
 
 a.mail,
