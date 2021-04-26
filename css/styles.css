@@ -199,6 +199,18 @@ a.resume {
 a.demo img.data-cap {
 	width: 30%;
 }
+/* embeds */
+iframe {
+	display: block;
+	width: 830px;
+	margin: 0 auto;
+	border: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+iframe::-webkit-scrollbar {
+	display: none;
+}
 
 /* mobile */
 @media all and (max-width:640px) {
