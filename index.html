@@ -24,16 +24,23 @@
 		</div>
 		<hr />
 		<div class="drawers">
-			<div class="demos">
-				<h3>AWS Quicksight Dashboard</h3>
-				<iframe src="https://drive.google.com/file/d/1UZ0gm_xFFV7ug4hgnZo0sKzbaRJNETSB/preview" width="640" height="480"></iframe>
+			<div class="demos click-zoom">
+				<h3>AWS Quicksight Dashboards</h3>
+				<label>
+					<input type="checkbox">
+					<img class="qs-cap" src="img/QSdash1.png" />
+				</label>
+				<label>
+					<input type="checkbox">
+					<img class="qs-cap" src="img/QSdash2.png" />
+				</label>
 				<p>
 					I'm an <a href="https://www.credly.com/badges/747ee852-08ee-4970-b92c-d8e70a35cf55" target="_blank">AWS Certified Cloud Practitioner</a>,
-					and one of my specialties is data visualization. AWS provides many powerful tools that allow the quick collection, transformation, and visualization of complex data (often times for free!). To create an interactive dashboard such as the one above, all you need is a database
+					and one of my specialties is data visualization. AWS provides many powerful tools that allow the quick collection, transformation, and visualization of complex data (often times for free!). To create an interactive dashboard such as the one in the screenshots above, all you need is a database
 					connection (or in this case a CSV hosted on S3) and a free AWS account.
 				</p>
 				<p>
-					To create this particular dashboard*, I downloaded a free data dump (CSV) of
+					For this particular dashboard, I started by downloading a free data dump (CSV) of
 					<a href="https://www.kaggle.com/codebreaker619/congress-on-social-media-201520" target="_blank">
 						US Congressional Member Social Media Statistics from 2015 through 2020
 					</a>.
@@ -43,12 +50,6 @@
 					leverage <a href="https://aws.amazon.com/glue/" target="_blank">AWS Glue</a> for ETL calculations, and the transformed data was then
 					imported as a Quicksight dataset. For the analysis, I chose to highlight comparisons in count of posts, followers, shares, and reactions,
 					and I think the resulting dashboard displays some interesting trends and patterns.
-				</p>
-				<p>
-					<i>
-						* The example above is an embedded PDF (using Google Drive) displaying a single tab of a multi-tab dashboard,
-						(exported from Quicksight) so it doesn't have the on-hover or drilldown interactivity.
-					</i>
 				</p>
 				<br />
 				<hr />

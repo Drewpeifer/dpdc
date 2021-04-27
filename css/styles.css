@@ -61,6 +61,7 @@ h2 {
 	cursor: pointer;
 	transition: all .5s ease-in-out;
 	width: fit-content;
+	font-size: 3em;
 }
 
 h2:hover {
@@ -130,9 +131,13 @@ a.demo {
 	text-align: center;
 }
 
-a.demo img {
+a.demo img, .demos img {
 	width: 70%;
 	border: #888 1px solid;
+}
+img.qs-cap {
+	display: block;
+	margin: 5px auto;
 }
 
 a {
@@ -207,12 +212,19 @@ a.resume {
 a.demo img.data-cap {
 	width: 30%;
 }
-/* embeds */
-iframe {
-	display: block;
-	width: 830px;
-	margin: 0 auto;
-	border: none;
+/* click-zoom */
+.click-zoom input[type=checkbox] {
+  display: none;
+}
+
+.click-zoom label img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+  transform: scale(2);
+  cursor: zoom-out;
 }
 
 /* mobile */
