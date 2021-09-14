@@ -1,25 +1,25 @@
 // content hide / show
-$('.headers h2').click(function() {
-	header = $(this);
-	topic = header.attr('class');
-	drawer = $('.drawers .' + topic);
+$('.controls ul li').click(function() {
+	console.log('binding...');
+	var link = $(this),
+		topic = link.attr('class'),
+		demo = $('.portal .' + topic);
 
-	if (header.hasClass('active')) {
-		// close current section
-		$('h2.active').removeClass('active');
-		$('.drawers div.active').removeClass('active').slideUp(100);
+	if (link.hasClass('active')) {
+		// do nothing
 	} else {
-		// deactivate any open sections
-		$('h2.active').removeClass('active');
-		$('.drawers div.active').removeClass('active').slideUp(100);
-		// make this header and its section active, show section
-		header.addClass('active');
-		drawer.addClass('active').slideDown(400);
+		// deactivate any open buttons and sections
+		$('.active').removeClass('active');
+		$('.content .visible').removeClass('visible');
+		// make this button and its section active/visible
+		link.addClass('active');
+		demo.addClass('visible');
 	}
 });
 
 $(function() {
-	content = $('.content');
+	console.log('doc ready');
+	// content = $('.content');
 
-	content.height(content.width());
+	// content.height(content.width());
 });
