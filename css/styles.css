@@ -184,3 +184,20 @@ a.resume {
 a.aws-badge {
 	top: 0;
 }
+
+/* responsive */
+@media only screen and (max-width: 700px) {
+	.content {
+		margin: 0;
+		width: 100%;
+	}
+	.controls {
+		max-width: 150px;
+	}
+	.controls ul li {
+		font-size: .8em;
+	}
+	.portal {
+		min-width: 400px;
+	}
+}
