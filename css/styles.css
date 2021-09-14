@@ -83,6 +83,12 @@ a:visited {
 	border-bottom: none;
 	border-radius: 0 0 0 15px;
 }
+p.attribution {
+	font-size: 10px;
+}
+p.attribution a {
+	margin: 0;
+}
 .portal,
 .controls ul li.active {
 	background: rgba(51,51,51,.6);
@@ -147,7 +153,6 @@ a.github-sm {
 	position: relative;
 	top: -12px;
 }
-
 a.mail,
 a.github,
 a.linkedin,
@@ -155,26 +160,22 @@ a.resume {
 	display: inline-block;
 	border-radius: 3px;
 }
-
 a.github {
 	background: #fff url(../img/github_logo.png) 0 0 no-repeat;
 	background-size: contain;
 	margin-left: 10px;
 	width: 74px;
 }
-
 a.mail {
 	background: transparent url(../img/mail.png) 0 0 no-repeat;
 	background-size: contain;
 	width: 34px;
 }
-
 a.linkedin {
 	background: transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
 	background-size: contain;
 	width: 35px;
 }
-
 a.resume {
 	background: transparent url(../img/resume.png) 0 0 no-repeat;
 	background-size: contain;
@@ -182,10 +183,4 @@ a.resume {
 }
 a.aws-badge {
 	top: 0;
-}
-p.attribution {
-	font-size: 10px;
-}
-p.attribution a {
-	margin: 0;
 }
