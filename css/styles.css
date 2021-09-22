@@ -4,6 +4,9 @@
   font-weight: normal;
   src: url(../fonts/OpenDyslexic-Regular.otf)
 }
+html, body {
+	width: 100%;
+}
 body {
 	background: #333;
 	background-image: url(../img/bg-lines.jpg);
@@ -100,9 +103,8 @@ p.attribution a {
 	margin: 0;
 }
 .portal {
+	min-height: 300px;
 	background: rgba(0,0,0,.5);
-}
-.portal {
 	flex-grow: 10;
 	border: 2px solid #999;
 	border-radius: 0 15px 15px 15px;
@@ -196,6 +198,9 @@ a.aws-badge {
 
 /* responsive */
 @media only screen and (max-width: 700px) {
+	body, .wrapper {
+		margin: 0 auto;
+	}
 	.content {
 		margin: 0;
 		width: 100%;
