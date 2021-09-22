@@ -5,6 +5,7 @@
   src: url(../fonts/OpenDyslexic-Regular.otf)
 }
 body {
+	background: #333;
 	background-image: url(../img/bg-lines.jpg);
 	background-size: initial;
 }
