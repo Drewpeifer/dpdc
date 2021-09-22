@@ -52,9 +52,9 @@ a:visited {
 }
 .content div p.links {
 	text-align: center;
-	background: rgba(0,0,0,.5);
+	background: rgba(51,51,51,.5);
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 15px;
 }
 .controls {
 	flex-grow: 0;
@@ -76,6 +76,16 @@ a:visited {
 	cursor: pointer;
 	background: rgba(0,0,0,.7);
 }
+.controls ul li:hover {
+	background: #999;
+	color: #333;
+}
+.controls ul li.active {
+	background: rgba(51,51,51,.5);
+}
+.controls ul li.active:hover {
+	color: #fff;
+}
 .controls ul li:first-child {
 	border-radius: 15px 0 0 0;
 }
@@ -89,9 +99,8 @@ p.attribution {
 p.attribution a {
 	margin: 0;
 }
-.portal,
-.controls ul li.active {
-	background: rgba(51,51,51,.6);
+.portal {
+	background: rgba(0,0,0,.5);
 }
 .portal {
 	flex-grow: 10;

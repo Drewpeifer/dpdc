@@ -6,7 +6,14 @@ $('.controls ul li').click(function() {
 		demo = $('.portal .' + topic);
 
 	if (link.hasClass('active')) {
-		// do nothing
+		// deactivate button + demo
+		console.dir(topic);
+		console.dir(demo);
+		link.removeClass('active');
+		$('.portal div').removeClass('visible');
+		// show default panel
+		$('.portal .default').addClass('visible');
+
 	} else {
 		// deactivate any open buttons and sections
 		$('.active').removeClass('active');
