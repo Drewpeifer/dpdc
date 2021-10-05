@@ -122,7 +122,7 @@ p.attribution a {
 	margin: 20px auto;
 }
 .portal div.default p {
-	text-align: left;
+	text-align: center;
 }
 .portal div.visible {
 	display: block;
