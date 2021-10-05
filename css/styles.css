@@ -1,16 +1,15 @@
-@font-face {
-  font-family: 'OpenDyslexic';
-  font-style: normal;
-  font-weight: normal;
-  src: url(../fonts/OpenDyslexic-Regular.otf)
-}
 html, body {
 	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
 }
 body {
-	background: #333;
-	background-image: url(../img/bg-lines.jpg);
+	background-color: rgba(0,0,0,.8);
+	background-image: url(../img/ellicia-bg.jpg);
 	background-size: initial;
+	background-blend-mode: multiply;
+	background-position: top;
 }
 body, .wrapper {
 	margin: 0;
@@ -28,10 +27,14 @@ a {
 a:visited {
 	color: #f2bf99;
 }
+.banner {
+	margin-left: 10px;
+}
 .banner h1,
 .banner h2 {
 	text-align: center;
 	margin: 0;
+	font-family: 'Fira Sans', sans-serif;
 }
 .banner h1 {
 	font-size: 3em;
@@ -43,10 +46,12 @@ a:visited {
 }
 .content {
 	margin: 0 auto 10px auto;
-	width: 90%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: stretch;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	width: 80%;
 }
 .content div p {
 	text-align: justify;
@@ -65,36 +70,35 @@ a:visited {
 }
 .controls ul {
 	list-style-type: none;
-	border: 2px solid #999;
-	border-right: none;
-	border-radius: 15px 0 0 15px;
 	padding: 0;
 	margin: 0;
-	flex-grow: 0;
+	display: flex;	
 }
 .controls ul li {
 	margin: 0;
 	padding: 10px;
-	border-bottom: 2px solid #999;
 	cursor: pointer;
-	background: rgba(0,0,0,.7);
+	background-position: right top;
+	display: inline-block;
+	background: rgba(0,0,0,.8);
+	border: 2px solid rgba(255,255,255,.7);
+	border-bottom: none;
+	border-left: none;
+	flex-grow: 2;
 }
-.controls ul li:hover {
-	background: #999;
-	color: #333;
-}
+.controls ul li:hover,
 .controls ul li.active {
-	background: rgba(51,51,51,.5);
-}
-.controls ul li.active:hover {
-	color: #fff;
+	background: rgba(255,255,255,.9);
+	color: #000;
 }
 .controls ul li:first-child {
 	border-radius: 15px 0 0 0;
+	border-left: none;
 }
 .controls ul li:last-child {
 	border-bottom: none;
-	border-radius: 0 0 0 15px;
+	border-radius: 0 15px 0 0;
+	border-right: none;
 }
 p.attribution {
 	font-size: 10px;
@@ -104,15 +108,21 @@ p.attribution a {
 }
 .portal {
 	min-height: 300px;
-	background: rgba(0,0,0,.5);
+	background: rgba(0,0,0,.9);
 	flex-grow: 10;
-	border: 2px solid #999;
-	border-radius: 0 15px 15px 15px;
+	border-radius: 0 0 15px 15px;
 }
 .portal div {
-	margin: 5px;
+	margin: 5px auto;
 	display: none;
 	text-align: center;
+}
+.portal div p {
+	max-width: 75%;
+	margin: 20px auto;
+}
+.portal div.default p {
+	text-align: left;
 }
 .portal div.visible {
 	display: block;
@@ -126,15 +136,15 @@ p.attribution a {
 
 /* click-zoom */
 .portal div input[type=checkbox] {
-  display: none;
+	display: none;
 }
 .portal div label img {
-  transition: transform 0.25s ease;
-  cursor: zoom-in;
+	transition: transform 0.25s ease;
+	cursor: zoom-in;
 }
 .portal div input[type=checkbox]:checked~img {
-  transform: scale(2.5) translate(-10%,0);
-  cursor: zoom-out;
+	transform: scale(2.5) translate(-10%,0);
+	cursor: zoom-out;
 }
 
 /* contact panel */
@@ -197,21 +207,19 @@ a.aws-badge {
 }
 
 /* responsive */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width:800px) {
 	body, .wrapper {
 		margin: 0 auto;
 	}
-	.content {
-		margin: 0;
-		width: 100%;
+	.banner h1, .banner h2, .contact {
+		text-align: left;
+		margin-left: 10px;
 	}
-	.controls {
-		max-width: 150px;
+	.content, .controls {
+		margin: 0;
+		min-width: 100%;
 	}
 	.controls ul li {
-		font-size: .8em;
-	}
-	.portal {
-		min-width: 400px;
+		font-size: .7em;
 	}
 }
