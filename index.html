@@ -49,12 +49,12 @@
 		<div class="content">
 			<div class="controls">
 				<ul>
+					<li class="apod">Vue3 APOD Search</li>
+					<li class="data-vis">Data Vis Libraries</li>
+					<li class="aws">AWS Dashboards</li>
 					<li class="medialytics">Medialytics</li>
-					<li class="data-vis">Data Visualizations</li>
-					<li class="aws">AWS Quicksight Dashboards</li>
 					<li class="vr-solar">3D/VR Solar System</li>
 					<li class="spacetrade">SpaceTrade</li>
-					<li class="apod">NASA APOD Search</li>
 				</ul>
 			</div>
 			<div class="portal">
@@ -65,9 +65,12 @@
 					<p>Curious about what I can do? Click the tabs above this section to view live demos and code examples.</p>
 				</div>
 				<div class="aws">
-					<p class="links">
-						<a target="_blank" href="img/aws-quicksight-dash1.pdf">Download this dashboard</a> as a PDF
-					</p>
+					<div class="links">
+						<p>
+							<a target="_blank" href="img/aws-quicksight-dash1.pdf">Download this dashboard</a> as a PDF
+						</p>
+						<p class="tech">Technologies used: AWS S3 / Glue / Quicksight</p>
+					</div>
 					<p>
 						I'm an <a href="https://www.credly.com/badges/747ee852-08ee-4970-b92c-d8e70a35cf55" target="_blank">AWS Certified Cloud Practitioner</a> and I have become a big fan of the dashboards you can create using their suite of data tools.
 					</p>
@@ -95,10 +98,52 @@
 						and I think the resulting dashboard displays some interesting trends and patterns.
 					</p>
 				</div>
-				<div class="medialytics">
-					<p class="links">
-						<a target="_blank" href="https://github.com/Drewpeifer/medialytics">Check out the code</a>
+				<div class="apod">
+					<div class="links">
+						<p>
+							<a target="_blank" href="https://drewpeifer-apod.netlify.app">Try the live demo</a> or
+							<a target="_blank" href="https://github.com/Drewpeifer/apod-vue">check out the code</a>
+						</p>
+						<p class="tech">Technologies used: Vue.js, TailwindCSS, jQueryUI</p>
+					</div>
+					<p>
+						This is a single page application powered by Vue.js (Vue3) that allows you to search
+						for the official NASA
+						<a target="_blank" href="https://apod.nasa.gov/apod/astropix.html">
+							Astronomy Picture of the Day
+						</a>
+						via their free API.
 					</p>
+					<label>
+						<input type="checkbox">
+						<img src="img/screencap_apod.png" />
+					</label>
+					<p>
+						I recently rebuilt this project using VueJS, specifically Vue3, and the live demo is 
+						hosted via Netlify. While I still find large frontend frameworks like Vue / React / Angular 
+						to be slightly overkill for projects like this, I took it as an opportunity to work through 
+						the most recent Vue documentation and "best-practice" posts.
+					</p>
+					<p>
+						I also took this opportunity to check out TailwindCSS, a library I had never worked with before. 
+						As a frontend engineer, I can see the benefit of using TailwindCSS for rapid prototyping and (sparingly) 
+						within design systems or component libraries. However, there are certain limitations, learning curves, 
+						and the ever-present HTML bloat to consider. I think I still prefer custom CSS/SCSS (and I may be biased),
+						but I might start leveraging Tailwind in the early stages of a project.
+					</p>
+					<p>
+						I also have an older jQuery-only version available at the following links: 
+						<a href="http://www.drewpeifer.com/demo/apod-engine" target="_blank">Demo</a> / 
+						<a href="http://github.com/Drewpeifer/demo/tree/master/apod-engine" target="_blank">Code</a>
+					</p>
+				</div>
+				<div class="medialytics">
+					<div class="links">
+						<p>
+							<a target="_blank" href="https://github.com/Drewpeifer/medialytics">Check out the code</a>
+						</p>
+						<p class="tech">Technologies used: jQuery, D3.js, transit.js</p>
+					</div>
 					<p>
 						Medialytics is a single page app that shows you information about the content
 						on your Plex server by parsing the XML feed that it generates.
@@ -120,10 +165,13 @@
 					</p>
 				</div>
 				<div class="data-vis">
-					<p class="links">
-						<a target="_blank" href="http://www.drewpeifer.com/demo/data-visualization">Try the live demo</a> or
-						<a target="_blank" href="http://github.com/Drewpeifer/demo/tree/master/data-visualization">check out the code</a>
-					</p>
+					<div class="links">
+						<p class="links">
+							<a target="_blank" href="http://www.drewpeifer.com/demo/data-visualization">Try the live demo</a> or
+							<a target="_blank" href="http://github.com/Drewpeifer/demo/tree/master/data-visualization">check out the code</a>
+						</p>
+						<p class="tech">Technologies used: VueJS, D3.js, Chart.js</p>
+					</div>
 					<p>
 						This is a single page demo that includes multiple examples of data visualization
 						frameworks, including
@@ -151,10 +199,13 @@
 					</label>
 				</div>
 				<div class="vr-solar">
-					<p class="links">
-						<a target="_blank" href="http://www.drewpeifer.com/demo/vr-solar">Try the live demo</a> or
-						<a target="_blank" href="https://github.com/Drewpeifer/demo/tree/master/vr-solar">check out the code</a>
-					</p>
+					<div class="links">
+						<p class="links">
+							<a target="_blank" href="http://www.drewpeifer.com/demo/vr-solar">Try the live demo</a> or
+							<a target="_blank" href="https://github.com/Drewpeifer/demo/tree/master/vr-solar">check out the code</a>
+						</p>
+						<p class="tech">Technologies used: A-Frame</p>
+					</div>
 					<p>This is a simple implementation of <a href="https://aframe.io/" target="_blank">A-Frame</a>, a client-side JS-based 3D framework.</p>
 					<label>
 						<input type="checkbox">
@@ -170,10 +221,13 @@
 					</p>
 				</div>
 				<div class="spacetrade">
-					<p class="links">
-						<a target="_blank" href="http://www.drewpeifer.com/demo/spacetrade">Try the live demo</a> or
-						<a target="_blank" href="https://github.com/Drewpeifer/demo/tree/master/spacetrade">check out the code</a>
-					</p>
+					<div class="links">
+						<p class="links">
+							<a target="_blank" href="http://www.drewpeifer.com/demo/spacetrade">Try the live demo</a> or
+							<a target="_blank" href="https://github.com/Drewpeifer/demo/tree/master/spacetrade">check out the code</a>
+						</p>
+						<p class="tech">Technologies used: jQuery, VueJS, transit.js</p>
+					</div>
 					<p>
 						A small JavaScript game similar to <i>Dope Wars</i> and other
 						resource management games, but also includes a randomized encounter
@@ -192,30 +246,6 @@
 						for binding the frontend to the backend (which required a ground-up
 						re-write) and I think the code benefited enormously
 						from the addition.
-					</p>
-				</div>
-				<div class="apod">
-					<p class="links">
-						<a target="_blank" href="http://www.drewpeifer.com/demo/apod-engine">Try the live demo</a> or
-						<a target="_blank" href="http://github.com/Drewpeifer/demo/tree/master/apod-engine">check out the code</a>
-					</p>
-					<p>
-						A single page application that allows you to search
-						for the official NASA
-						<a target="_blank" href="https://apod.nasa.gov/apod/astropix.html">
-							Astronomy Picture of the Day
-						</a>
-						for any date.
-					</p>
-					<label>
-						<input type="checkbox">
-						<img src="img/screencap_apod.png" />
-					</label>
-					<p>
-						I'm a space nerd at heart, so this was an interesting project
-						that I actually return to and use from time to time, just for fun.
-						It also features a pure CSS/JS starfield background that's lightweight and
-						modular (which was a fun little project in itself).
 					</p>
 				</div>
 			</div>

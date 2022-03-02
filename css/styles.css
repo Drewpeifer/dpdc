@@ -59,11 +59,20 @@ a:visited {
 	margin: 20px;
 	letter-spacing: 1.7px;
 }
-.content div p.links {
-	text-align: center;
-	background: rgba(51,51,51,.5);
+.content div.links {
+	background: #333;
 	padding: 10px;
-	border-radius: 15px;
+	border-radius: 0 0 15px 15px;
+	border: 2px solid rgba(255,255,255,.7);
+	border-top: none;
+}
+.content div.links p {
+	text-align: center;
+	margin:  5px;
+	max-width: none;
+}
+.content div p.tech {
+	font-size: 14px;
 }
 .controls {
 	flex-grow: 0;
@@ -90,8 +99,8 @@ a:visited {
 }
 .controls ul li:hover,
 .controls ul li.active {
-	background: rgba(255,255,255,.9);
-	color: #000;
+	background: #333;
+	color: #fff;
 }
 .controls ul li:first-child {
 	border-radius: 15px 0 0 0;
@@ -113,8 +122,8 @@ p.attribution a {
 	flex-grow: 10;
 	border-radius: 0 0 15px 15px;
 }
-.portal div {
-	margin: 5px auto;
+.portal > div {
+	margin: 0 auto;
 	display: none;
 	text-align: center;
 }
@@ -129,8 +138,8 @@ p.attribution a {
 	display: block;
 }
 .portal div label img {
-	max-width: 60%;
-	max-height: 200px;
+	max-width: 70%;
+	max-height: 300px;
 	border-radius: 15px;
 	border: 2px solid #555;
 }
