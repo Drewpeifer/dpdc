@@ -128,7 +128,8 @@ p.attribution a {
 .portal div.visible {
 	display: block;
 }
-.portal div label img {
+.portal div label img
+.portal div label svg {
 	max-width: 70%;
 	max-height: 300px;
 	border-radius: 15px;
@@ -193,9 +194,8 @@ a.mail {
 	width: 34px;
 }
 a.linkedin {
-	background: transparent url(../img/linkedin_logo.png) 0 0 no-repeat;
-	background-size: contain;
 	width: 35px;
+	font-size:35px;
 }
 a.resume {
 	background: transparent url(../img/resume.png) 0 0 no-repeat;
