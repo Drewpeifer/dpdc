@@ -1,32 +1,26 @@
-// content hide / show
-$('.controls ul li').click(function() {
-	console.log('binding...');
-	var link = $(this),
-		topic = link.attr('class'),
-		demo = $('.portal .' + topic);
+const displayContent = (e) => {
+    console.log('displaying content...');
+    console.dir(e);
+    const link = e.target,
+          topic = link.id,
+          content = document.getElementsByClassName(topic)[0];
 
-	if (link.hasClass('active')) {
-		// deactivate button + demo
-		console.dir(topic);
-		console.dir(demo);
-		link.removeClass('active');
-		$('.portal div').removeClass('visible');
-		// show default panel
-		$('.portal .default').addClass('visible');
+    if (link.classList.contains('active')) {
+        // topic is visible, so hide it
+        link.classList.remove('active');
+        document.getElementsByClassName(topic)[0].classList.remove('visible');
+        // show default panel
+        document.getElementById('default').classList.add('visible');
+    } else {
+        // topic is hidden, so show it
+        document.getElementsByClassName('active')[0]?.classList.remove('active');
+        document.getElementsByClassName('visible')[0]?.classList.remove('visible');
+        link.classList.add('active');
+        document.getElementsByClassName(topic)[0].classList.add('visible');
+    }
+}
 
-	} else {
-		// deactivate any open buttons and sections
-		$('.active').removeClass('active');
-		$('.content .visible').removeClass('visible');
-		// make this button and its section active/visible
-		link.addClass('active');
-		demo.addClass('visible');
-	}
-});
-
-$(function() {
-	console.log('doc ready');
-	// content = $('.content');
-
-	// content.height(content.width());
+const controls = document.getElementsByClassName('control');
+Array.from(controls).forEach((control) => {
+    control.addEventListener('click', displayContent);
 });
