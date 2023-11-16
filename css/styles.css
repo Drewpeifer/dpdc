@@ -128,8 +128,7 @@ p.attribution a {
 .portal div.visible {
 	display: block;
 }
-.portal div label img
-.portal div label svg {
+.portal div label img {
 	max-width: 70%;
 	max-height: 300px;
 	border-radius: 15px;
