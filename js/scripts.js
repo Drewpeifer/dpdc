@@ -1,6 +1,4 @@
 const displayContent = (e) => {
-    console.log('displaying content...');
-    console.dir(e);
     const link = e.target,
           topic = link.id,
           content = document.getElementsByClassName(topic)[0];
