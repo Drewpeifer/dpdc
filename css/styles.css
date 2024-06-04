@@ -46,6 +46,7 @@ a:visited {
 	font-weight: bold;
 	width: 80%;
 	box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
+	border-radius: 15px;
 }
 .content div p {
 	text-align: justify;
