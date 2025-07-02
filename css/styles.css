@@ -21,21 +21,26 @@ a {
 a:visited {
 	color: #f2bf99;
 }
-.banner h1,
-.banner h2 {
+h1,
+h2 {
 	text-align: center;
 	margin: 0;
 	font-family: 'Fira Sans', sans-serif;
 }
-.banner h1 {
+h1 {
 	font-size: 3em;
 	margin-top: 5px;
 	line-height: 1.5em;
 }
-.banner h2 {
+h2 {
 	font-size: 1em;
 	font-weight: normal;
 	margin-bottom: 10px;
+}
+h3 {
+	font-size: 1.5em;
+	margin-top: 20px;
+	font-weight: normal;
 }
 .content {
 	margin: 0 auto 10px auto;
@@ -45,8 +50,9 @@ a:visited {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
 	width: 80%;
-	box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
+	/* box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5); */
 	border-radius: 15px;
+	/* background: rgba(0,0,0,.3); */
 }
 .content div p {
 	text-align: justify;
@@ -188,6 +194,8 @@ a.github {
 	background-size: contain;
 	margin-left: 10px;
 	width: 74px;
+	padding: 0 3px;
+	background-position: center;
 }
 a.mail {
 	background: transparent url(../img/mail.png) 0 0 no-repeat;
@@ -207,7 +215,26 @@ a.aws-badge {
 	top: 0;
 	margin: 10px 0;
 }
-
+.wrapper hr {
+	width: 85%;
+}
+.project-list {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.project-list div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.content h3 {
+	text-align: center;
+	padding-bottom: 10px;
+}
 /* responsive */
 @media only screen and (max-width:800px) {
 	body, .wrapper {
