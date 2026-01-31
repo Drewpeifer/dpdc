@@ -225,7 +225,7 @@ a.aws-badge {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
-.project-list div {
+.project-list > div {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 30px;
