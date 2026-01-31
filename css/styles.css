@@ -120,6 +120,9 @@ a.resume {
 	margin-bottom: 30px;
 	text-align: center;
 }
+.project-list .gh-widget-header {
+	text-align: left;
+}
 /* responsive */
 @media only screen and (max-width:800px) {
 	body, .wrapper {
