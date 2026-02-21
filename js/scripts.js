@@ -11,6 +11,12 @@ GitHubWidget.create({
     theme: 'dark'
 });
 GitHubWidget.create({
+    container: '#claudash-widget',
+    owner: 'drewpeifer',
+    repo: 'personal-dash-cl',
+    theme: 'dark'
+});
+GitHubWidget.create({
     container: '#widget-widget',
     owner: 'drewpeifer',
     repo: 'gh-repo-widget',
