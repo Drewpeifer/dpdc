@@ -12,7 +12,13 @@ body, .wrapper {
 	flex-direction: column;
 	justify-content: center;
 	color: #f2f2f2;
-	font-family: 'Exo 2', sans-serif;
+	font-family: sans-serif;
+}
+body {
+	background-size: 500% 500%;
+	background-image: linear-gradient(45deg, #000 0%, #111 30%, #333 50%, #555 75%, #777 100%);
+	-webkit-animation: animateBG 10s linear 1;
+	animation: animateBG 10s linear 1;
 }
 a {
 	text-decoration: none;
@@ -60,11 +66,6 @@ h3 {
 .contact {
 	text-align: center;
 	margin-bottom: 10px;
-}
-.contact hr {
-	display: block;
-	background-image: none;
-	margin: 0;
 }
 .contact a {
 	display: inline-block;
@@ -135,22 +136,9 @@ a.resume {
 	.content {
 		margin: 0;
 		min-width: 100%;
-		box-shadow: none;
-	}	
-	.content {
 		padding: 10px 0;
-		border: none;
 		border-radius: 0px;
 	}
-}
-/* animated background */
-body {
-	width: 100%;
-	display: flex;
-	background-size: 500% 500%;
-	background-image: linear-gradient(45deg, #000 0%, #111 30%, #333 50%, #555 75%, #777 100%);
-	-webkit-animation: animateBG 10s linear 1;
-	animation: animateBG 10s linear 1;
 }
 @-webkit-keyframes animateBG {
 	0% {
