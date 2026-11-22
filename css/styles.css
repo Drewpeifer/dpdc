@@ -158,3 +158,29 @@ a.resume {
 		background-position: 100% 50%;
 	}
 }
+/* Site nav (shared with the posts site, https://drewpeifer.com/posts/) */
+.site-nav {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	margin: 10px 0 24px;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.1em;
+}
+.site-nav a,
+.site-nav a:visited {
+	color: #a2d3e8;
+	padding: 2px 0;
+	border-bottom: 2px solid transparent;
+}
+.site-nav a:hover {
+	border-bottom-color: #a2d3e8;
+}
+.site-nav a[aria-current="page"] {
+	color: #f2f2f2;
+	border-bottom-color: #f2f2f2;
+}
+
+.content > .project-list {
+	margin-top: 20px;
+}
